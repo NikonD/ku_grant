@@ -1,0 +1,90 @@
+/* CalculatorForm.css */
+
+.calc-card {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  padding: 26px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  /* sticky чтобы форма не уходила при скролле */
+  position: sticky;
+  top: 84px;
+}
+
+.calc-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.calc-icon  { font-size: 34px; flex-shrink: 0; line-height: 1; }
+.calc-title { font-size: 20px; margin-bottom: 2px; }
+.calc-sub   { font-size: 12px; color: var(--muted); font-family: 'Inter', sans-serif; font-weight: 400; }
+
+.calc-form { display: flex; flex-direction: column; gap: 18px; }
+
+/* Поле */
+.field            { display: flex; flex-direction: column; gap: 6px; }
+.field__label     { font-size: 14px; font-weight: 500; }
+.field__label--muted { color: var(--muted); }
+.field__hint      { font-weight: 400; color: var(--muted); }
+.field__note      { font-size: 12px; color: var(--muted); line-height: 1.4; }
+.field__note--blue {
+  background: #eff6ff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: #1e40af;
+}
+.field__percent {
+  display: inline-flex;
+  align-self: flex-start;
+  background: var(--blue-light);
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+.field__pair-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  background: #d1fae5;
+  color: #065f46;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 99px;
+}
+
+/* Disabled select */
+select:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: var(--bg);
+}
+
+.calc-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 13px;
+  color: var(--red);
+}
+
+.btn-calc {
+  background: var(--blue);
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+  border: none;
+  margin-top: 2px;
+  letter-spacing: 0.2px;
+}
+.calc-btn:hover  { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(26,86,219,0.28); }
+.calc-btn:active { transform: translateY(0); }

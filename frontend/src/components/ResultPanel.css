@@ -1,0 +1,132 @@
+/* ResultPanel.css */
+
+.result-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: calc(100vh - 180px);
+  /* sticky чтобы результат не уходил вверх при скролле */
+  position: sticky;
+  top: 84px;
+}
+
+/* Шапка */
+.rp-header {
+  background: white;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  padding: 18px 20px;
+}
+.rp-title { font-size: 18px; margin-bottom: 10px; }
+.rp-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.rp-chip {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.rp-chip strong         { color: var(--text); }
+.rp-chip--green         { background: #d1fae5; border-color: #6ee7b7; color: #065f46; }
+.rp-chip--green strong  { color: #065f46; }
+
+/* Лучший вариант */
+.rp-best {
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.rp-best--green  { background: #d1fae5; }
+.rp-best--blue   { background: #dbeafe; }
+.rp-best--orange { background: #ffedd5; }
+.rp-best--red    { background: #fee2e2; }
+.rp-best__label { font-size: 11px; font-weight: 700; white-space: nowrap; }
+.rp-best__info  { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+.rp-best__code  { font-size: 11px; font-weight: 700; color: var(--blue); }
+.rp-best__name  { font-size: 13px; font-weight: 600; line-height: 1.35; }
+.rp-best__prob  { font-size: 22px; font-weight: 800; flex-shrink: 0; }
+
+/* Легенда */
+.rp-legend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  background: var(--bg);
+  border-radius: 10px;
+  padding: 9px 14px;
+}
+.rp-legend__item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--muted); }
+.rp-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.rp-dot--green  { background: var(--green);  }
+.rp-dot--blue   { background: var(--blue);   }
+.rp-dot--orange { background: var(--orange); }
+.rp-dot--red    { background: var(--red);    }
+
+/* Список — скролл */
+.rp-list {
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 4px;
+  /* тонкий скроллбар */
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+.rp-list::-webkit-scrollbar { width: 4px; }
+.rp-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+
+/* Строка специальности */
+.rp-row {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--border);
+  padding: 11px 12px;
+  transition: box-shadow 0.15s;
+}
+.rp-row:hover              { box-shadow: 0 2px 10px rgba(0,0,0,0.07); }
+.rp-row--green             { border-left-color: var(--green);  }
+.rp-row--blue              { border-left-color: var(--blue);   }
+.rp-row--orange            { border-left-color: var(--orange); }
+.rp-row--red               { border-left-color: var(--red);    }
+
+.rp-row__num   { font-size: 11px; color: var(--muted); font-weight: 700; text-align: center; }
+.rp-row__info  { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.rp-row__code  { font-size: 10px; font-weight: 700; color: var(--blue); }
+.rp-row__name  { font-size: 13px; font-weight: 500; line-height: 1.35; }
+
+.rp-row__bar-wrap { display: flex; align-items: center; gap: 6px; margin-top: 4px; }
+.rp-row__bar-bg   { flex: 1; height: 5px; background: var(--bg); border-radius: 99px; overflow: hidden; }
+.rp-row__bar-fill { height: 100%; border-radius: 99px; transition: width .6s ease; }
+.rp-row__bar-fill--green  { background: var(--green);  }
+.rp-row__bar-fill--blue   { background: var(--blue);   }
+.rp-row__bar-fill--orange { background: var(--orange); }
+.rp-row__bar-fill--red    { background: var(--red);    }
+.rp-row__base { font-size: 10px; color: var(--muted); white-space: nowrap; }
+
+.rp-row__right { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; flex-shrink: 0; }
+.rp-badge { font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 99px; white-space: nowrap; }
+.rp-badge--green  { background: #d1fae5; color: #065f46; }
+.rp-badge--blue   { background: #dbeafe; color: #1e40af; }
+.rp-badge--orange { background: #ffedd5; color: #9a3412; }
+.rp-badge--red    { background: #fee2e2; color: #991b1b; }
+.rp-row__prob { font-size: 17px; font-weight: 800; }
+
+/* Подвал */
+.rp-footer {
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 4px;
+}

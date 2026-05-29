@@ -1,0 +1,112 @@
+/* App.css */
+
+/* ── Шапка ── */
+.site-header {
+  background: rgb(242, 251, 255);
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06)
+}
+
+.header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 14px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+}
+.header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.header__logo  { font-size: 36px; line-height: 1; flex-shrink: 0; }
+.header__title { font-size: 18px; color: var(--blue); margin-bottom: 2px; }
+.header__sub   { font-size: 12px; color: var(--muted); font-family: 'Inter', sans-serif; font-weight: 400; }
+
+/* ── Бегущая строка ── */
+.ticker {
+  position: relative;
+  background: linear-gradient(135deg, rgb(5, 164, 186) 0%, rgb(5, 164, 186) 100%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 72px;
+  min-height: 62px;
+  overflow: hidden;
+  user-select: none;
+}
+.ticker__label {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.65);
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+.ticker__card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: opacity .28s, transform .28s;
+}
+.ticker__card--in  { opacity: 1;  transform: translateX(0); }
+.ticker__card--out { opacity: 0;  transform: translateX(16px); }
+
+.ticker__emoji  { font-size: 24px; flex-shrink: 0; line-height: 1; }
+.ticker__info   { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+.ticker__title  { font-size: 15px; font-weight: 700; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-family: 'Unbounded', system-ui, sans-serif; }
+.ticker__sub    { font-size: 12px; color: rgba(255,255,255,0.7); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ticker__right  { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; flex-shrink: 0; margin-right: 8px; }
+.ticker__salary { font-size: 14px; font-weight: 700; color: #ffffff; white-space: nowrap; }
+.ticker__trend  { font-size: 11px; color: rgba(255,255,255,0.6); white-space: nowrap; }
+
+.ticker__dots   { display: flex; gap: 6px; flex-shrink: 0; }
+.ticker__dot    { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.3); border: none; cursor: pointer; padding: 0; transition: background .2s, transform .2s; }
+.ticker__dot--active { background: #fff; transform: scale(1.3); }
+
+.ticker__arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.15);
+  border: none; color: #fff; font-size: 22px;
+  width: 34px; height: 34px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: background .2s; z-index: 2;
+  padding-bottom: 2px;
+}
+.ticker__arrow:hover { background: rgba(255,255,255,0.3); }
+.ticker__arrow--l   { left: 14px; }
+.ticker__arrow--r   { right: 14px; }
+
+/* ── Двухколоночный лейаут ── */
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 24px 60px;
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .ticker { padding: 0 44px; }
+  .ticker__label, .ticker__right { display: none; }
+  .ticker__arrow { width: 28px; height: 28px; font-size: 18px; }
+  .ticker__arrow--l { left: 6px; }
+  .ticker__arrow--r { right: 6px; }
+  .layout { padding: 20px 14px 60px; gap: 20px; }
+}
