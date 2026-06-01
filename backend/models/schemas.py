@@ -61,6 +61,9 @@ class AssessmentItem(BaseModel):
     name: str
     min_score: int
     chance: float
+    # True — если по этой программе для выбранной квоты данных нет,
+    # и расчёт сделан по общему конкурсу (фронт покажет пометку).
+    is_fallback: bool = False
 
 class AssessmentChanceResponse(BaseModel):
     assessments : List[AssessmentItem]

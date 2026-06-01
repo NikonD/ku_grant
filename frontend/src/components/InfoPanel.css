@@ -81,6 +81,14 @@
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
+
+@media (max-width: 480px) {
+  .info-panel__header,
+  .info-steps,
+  .info-facts        { padding: 18px; border-radius: 14px; }
+  .info-facts__grid  { grid-template-columns: 1fr; }
+  .info-panel__title { font-size: 18px; }
+}
 .info-fact {
   display: flex;
   align-items: flex-start;

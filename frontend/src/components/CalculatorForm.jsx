@@ -113,11 +113,13 @@ export default function CalculatorForm({ onResult }) {
       // Адаптируем поля бэкенда к тому что ожидает ResultPanel:
       // бэк даёт chance (0-100), ResultPanel ждёт probability
       // бэк даёт min_score, ResultPanel ждёт baseScore
+      // is_fallback → isFallback (camelCase для фронта)
       const adapted = data.assessments
         .map(item => ({
           ...item,
-          probability: Math.round(item.chance), // chance → probability
-          baseScore:   item.min_score,          // min_score → baseScore
+          probability: Math.round(item.chance),
+          baseScore:   item.min_score,
+          isFallback:  item.is_fallback === true,
         }))
         .sort((a, b) => b.probability - a.probability);
 

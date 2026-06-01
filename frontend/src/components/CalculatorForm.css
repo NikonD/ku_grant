@@ -6,9 +6,21 @@
   border: 1px solid var(--border);
   padding: 26px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  /* sticky чтобы форма не уходила при скролле */
+  /* sticky чтобы форма не уходила при скролле — только на десктопе */
   position: sticky;
-  top: 84px;
+  top: var(--sticky-top);
+}
+
+/* На одноколоночном лейауте sticky мешает: форма закрывает результат */
+@media (max-width: 860px) {
+  .calc-card {
+    position: static;
+    padding: 20px;
+    border-radius: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .calc-card { padding: 16px; }
 }
 
 .calc-top {
@@ -22,6 +34,11 @@
 .calc-icon  { font-size: 34px; flex-shrink: 0; line-height: 1; }
 .calc-title { font-size: 20px; margin-bottom: 2px; }
 .calc-sub   { font-size: 12px; color: var(--muted); font-family: 'Inter', sans-serif; font-weight: 400; }
+
+@media (max-width: 480px) {
+  .calc-title { font-size: 18px; }
+  .calc-top   { padding-bottom: 16px; margin-bottom: 16px; gap: 10px; }
+}
 
 .calc-form { display: flex; flex-direction: column; gap: 18px; }
 

@@ -9,9 +9,11 @@ function getBadge(prob) {
 }
 
 export default function ResultPanel({ result, entScore, quotaLabel }) {
-  const total      = result.length;
-  const highChance = result.filter(r => r.probability >= 50).length;
-  const best       = result[0];
+  const total          = result.length;
+  const highChance     = result.filter(r => r.probability >= 50).length;
+  const best           = result[0];
+  const fallbackCount  = result.filter(r => r.isFallback).length;
+  const allFallback    = fallbackCount > 0 && fallbackCount === total;
 
   return (
     <div className="result-panel">
@@ -26,6 +28,23 @@ export default function ResultPanel({ result, entScore, quotaLabel }) {
           <span className="rp-chip rp-chip--green">Шанс ≥50%: <strong>{highChance}</strong></span>
         </div>
       </div>
+
+      {/* Предупреждение, если по выбранной квоте нет точной статистики */}
+      {allFallback && (
+        <div></div>
+        // <div className="rp-notice rp-notice--warn">
+        //   ⚠ По выбранной квоте университет не публикует отдельную статистику.
+        //   Расчёт сделан по общему конкурсу 2025,
+        //   проверьте условия квоты на <a href="https://ku.edu.kz" target="_blank" rel="noreferrer">сайте университета&nbsp;</a>.
+        // </div>
+      )}
+      {!allFallback && fallbackCount > 0 && (
+        <div className="rp-notice rp-notice--info">
+          Звёздочкой (<span className="rp-fallback-mark">∗</span>) отмечены программы,
+          по которым на эту квоту в 2025&nbsp;г. не было заявок —
+          расчёт сделан по общему конкурсу.
+        </div>
+      )}
 
       {/* Лучший вариант */}
       {best && (
@@ -56,7 +75,15 @@ export default function ResultPanel({ result, entScore, quotaLabel }) {
               <span className="rp-row__num">{i + 1}</span>
               <div className="rp-row__info">
                 <span className="rp-row__code">{spec.code}</span>
-                <span className="rp-row__name">{spec.name}</span>
+                <span className="rp-row__name">
+                  {spec.name}
+                  {spec.isFallback && (
+                    <span
+                      className="rp-fallback-mark"
+                      title="Для этой программы нет данных по выбранной квоте — расчёт сделан по общему конкурсу"
+                    >∗</span>
+                  )}
+                </span>
                 <div className="rp-row__bar-wrap">
                   <div className="rp-row__bar-bg">
                     <div

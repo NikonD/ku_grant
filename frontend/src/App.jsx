@@ -123,7 +123,7 @@ export default function App() {
               <img 
                 src="./ku.png"
                 className="img-fluid ku-icon"
-                style={{ height: "33px" }}
+                alt="Kozybayev University"
               />
             </a> 
            </div> 
