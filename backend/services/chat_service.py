@@ -1,45 +1,56 @@
 # ============================================================
-# services/chat_service.py — AI чат-бот через Claude API
+# services/chat_service.py — AI чат-бот через Groq API
 # ============================================================
 
 import os
 import json
 import logging
 import re
+from typing import List, Optional
+
 from sqlalchemy.orm import Session
-from typing import List
-from models.schemas import ChatMessage
-from groq import Groq
 from dotenv import load_dotenv
+from groq import Groq
+
+from models.schemas import ChatMessage, DEFAULT_LANG, SUPPORTED_LANGS
 from services.calculator_service import assessment_chances_list
 from routers.specialties import get_by_item
 from logger_config import app_logging
+
 load_dotenv()
 app_logging()
 logger = logging.getLogger(__name__)
-# Создаём клиент Anthropic (API ключ берётся из переменной окружения)
+
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
-
 # ============================================================
-# Системный промпт — "личность" и знания нашего бота
+# Системный промпт — базовая личность, языкозависимая часть добавляется ниже
 # ============================================================
-SYSTEM_PROMPT = """"Ты — AI-ассистент абитуриента Северо-Казахстанского университета имени Манаша Козыбаева (СКУ им. М. Козыбаева), расположенного в городе Петропавловск, Казахстан.
+SYSTEM_PROMPT_BASE = """Ты — AI-ассистент абитуриента Северо-Казахстанского университета имени Манаша Козыбаева (СКУ им. М. Козыбаева, англ. Kozybayev University), расположенного в городе Петропавловск, Казахстан.
 
 Твоя задача — помогать абитуриентам выбрать специальность и разобраться с поступлением.
 
 ТВОИ ЗНАНИЯ:
 
-Ты знаешь все специальности университета Козыбаева.
+Ты знаешь все специальности университета Козыбаева, на которые в 2025 году выделялись гранты.
 
 Ты понимаешь систему ЕНТ (Единое Национальное Тестирование) в Казахстане.
 
-Ты знаешь о квотах: общий (general), сельская (rural), для сирот (orphan), для лиц с инвалидностью.
+Ты знаешь действующие квоты МНВО РК: общий конкурс, сельская молодёжь, переселение в приоритетные регионы, многодетные семьи, неполные семьи, дети-сироты, инвалидность I/II/с детства, семья с ребёнком-инвалидом, қандасы, ветераны боевых действий.
 
-Ты понимаешь систему грантов МОН РК.
+Ты понимаешь систему грантов МНВО РК (Министерство науки и высшего образования РК — текущее название, не путай со старым МОН РК).
 
 Максимальный балл ЕНТ = 140.
+
+ПОРОГИ УЧАСТИЯ В КОНКУРСЕ ГРАНТОВ (приказ МНВО РК):
+• Педагогические специальности (коды 6B01xxx): минимум 75 баллов.
+• Юриспруденция (6B04201): минимум 75 баллов.
+• Медицинские специальности (медицина, стоматология, фармация — 6B101xx): минимум 70 баллов.
+• Технические, аграрные и прочие специальности: минимум 50 баллов.
+Если балл абитуриента ниже порога — он НЕ допускается к конкурсу грантов по этим направлениям. Об этом нужно честно говорить.
+
+ВАЖНО: льготы «после срочной военной службы» в калькуляторе НЕТ. Эти абитуриенты приходят с готовыми сертификатами на грант и попадают в министерский приказ напрямую, к публичному конкурсу не идут — не предлагай этот вариант.
 
 ИНСТРУКЦИИ ПО ИСПОЛЬЗОВАНИЮ TOOLS:
 
@@ -47,7 +58,7 @@ SYSTEM_PROMPT = """"Ты — AI-ассистент абитуриента Сев
 
 Используй assessment_chances_list, ТОЛЬКО когда у тебя есть и комбинация предметов, и конкретный балл пользователя.
 
-В аргумент item_comb всегда передавай предметы через пробел и плюс, например: 'Физика + Математика'.
+В аргумент item_comb всегда передавай предметы через пробел и плюс, например: 'Физика + Математика'. ЭТОТ АРГУМЕНТ ВСЕГДА НА РУССКОМ — это технический ключ в базе.
 
 В аргумент quota всегда передавай 'общий', если пользователь не указал иное.
 
@@ -57,8 +68,6 @@ SYSTEM_PROMPT = """"Ты — AI-ассистент абитуриента Сев
 
 СТИЛЬ ОБЩЕНИЯ:
 
-Отвечай на языке пользователя (казахский, русский или оба).
-
 Будь дружелюбным и поддерживающим.
 
 Задавай уточняющие вопросы про интересы и любимые предметы.
@@ -66,7 +75,6 @@ SYSTEM_PROMPT = """"Ты — AI-ассистент абитуриента Сев
 Конкретизируй рекомендации исходя из балла ЕНТ, но не давай ложных обещаний о 100% гарантии поступления.
 
 Не упоминай балл пользователя в каждом предложении, делай это только когда это уместно в контексте рассуждения о шансах.
-
 
 СТРУКТУРА ОТВЕТА:
 
@@ -77,143 +85,152 @@ SYSTEM_PROMPT = """"Ты — AI-ассистент абитуриента Сев
 Заканчивай ответ вопросом или призывом к действию.
 """
 
+LANG_INSTRUCTIONS = {
+    "ru": "ВАЖНО: ВСЕГДА отвечай пользователю ТОЛЬКО на русском языке. Если пользователь пишет на другом языке — всё равно ОТВЕЧАЙ на русском.",
+    "kk": "МАҢЫЗДЫ: пайдаланушыға ТЕК қазақ тілінде жауап бер. Егер пайдаланушы басқа тілде жазса да — жауап ҚАЗАҚ тілінде ғана болуы тиіс.",
+    "en": "IMPORTANT: ALWAYS reply to the user ONLY in English. Even if the user writes in another language — answer in English.",
+}
+
+
+def _resolve_lang(lang: Optional[str]) -> str:
+    if lang and lang.lower() in SUPPORTED_LANGS:
+        return lang.lower()
+    return DEFAULT_LANG
+
 
 def get_chat_response(
     message:   str,
     history:   List[ChatMessage],
-    db : Session,
-    ent_score: int = None
+    db:        Session,
+    ent_score: Optional[int] = None,
+    lang:      Optional[str] = None,
 ) -> str:
-    """
-    Отправляет сообщение в Groq API и возвращает ответ.
-    
-    Аргументы:
-        message   — текущее сообщение пользователя
-        history   — список предыдущих сообщений [{role, content}]
-        ent_score — балл ЕНТ (если пользователь указал в форме)
-    
-    Возвращает:
-        Строку с ответом AI
-    """
+    """Отправляет сообщение в Groq API и возвращает ответ на нужном языке."""
+    lang = _resolve_lang(lang)
+
     tools = [
         {
-            "type" : "function",
-            "function" : {
-                "name" : "assessment_chances_list",
-                "description" : "Рассчитать шансы на поступление на основе баллов ент и комбинаций предметов",
-                "parameters" : {
-                    "type" : "object",
-                    "properties" : {
-                        "ent_score" : {
-                            "type" : "integer",
-                            "description" : "ЕНТ балл пользователя (от 0 до 140)"
+            "type": "function",
+            "function": {
+                "name": "assessment_chances_list",
+                "description": "Рассчитать шансы на поступление на основе баллов ЕНТ и комбинаций предметов",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "ent_score": {
+                            "type": "integer",
+                            "description": "ЕНТ балл пользователя (от 0 до 140)"
                         },
-                        "item_comb" : {
-                            "type" : "string",
-                            "description" : "Комбинация предметов строго в формате 'Предмет 1 + Предмет 2' (с пробелами). Пример: 'Биология + География'. Пиши названия предметов КОРРЕКТНО. Не сокращай и не меняй буквы в словах."
+                        "item_comb": {
+                            "type": "string",
+                            "description": "Комбинация предметов строго в формате 'Предмет 1 + Предмет 2' (с пробелами). Пример: 'Биология + География'. ВСЕГДА НА РУССКОМ ЯЗЫКЕ. Пиши названия предметов КОРРЕКТНО."
                         },
-                        "quota" : {
-                            "type" : "string",
-                            "enum" : ["общий","сельская","сироты","инвалидность"],
-                            "description" : "Тип квоты пользователя. Если не указан — использовать 'общий'."
+                        "quota": {
+                            "type": "string",
+                            "enum": [
+                                "общий", "сельская", "rural_move",
+                                "large_family", "single_parent",
+                                "orphan", "disability_self", "disability_family",
+                                "kazakh_diaspora", "veteran"
+                            ],
+                            "description": "Код квоты пользователя. Если не указан — использовать 'общий'. Льготы 'conscript' (после срочной службы) НЕ существует — не используй её."
                         }
                     },
-                    "required" : ["ent_score", "item_comb", "quota"]
+                    "required": ["ent_score", "item_comb", "quota"]
                 }
             }
         },
         {
-           "type" : "function",
-           "function" : {
-                "name" : "get_by_item",
-                "description" : "Сведения об специальностей в БД",
-                "parameters" : {
-                    "type" : "object",
-                    "properties" : {
-                        "item_comb" : {
-                            "type" : "string" ,
-                            "description" : "Комбинация предметов строго в формате 'Предмет 1 + Предмет 2' (с пробелами). Пример: 'Биология + География'. Пиши названия предметов КОРРЕКТНО. Не сокращай и не меняй буквы в словах." 
+            "type": "function",
+            "function": {
+                "name": "get_by_item",
+                "description": "Сведения о специальностях по комбинации предметов",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "item_comb": {
+                            "type": "string",
+                            "description": "Комбинация предметов строго в формате 'Предмет 1 + Предмет 2' (с пробелами). Пример: 'Биология + География'. ВСЕГДА НА РУССКОМ ЯЗЫКЕ."
                         }
                     },
-                    "required" : ["item_comb"]
+                    "required": ["item_comb"]
                 }
-           }     
+            }
         }
     ]
-    # Если есть балл ЕНТ — добавляем его в контекст сообщения
+
+    enriched_message = message
     if ent_score is not None:
         enriched_message = f"[Балл ЕНТ пользователя: {ent_score}]\n{message}"
-    else:
-        enriched_message = message
 
-    # Формируем историю сообщений в формате Groq API
-    chat_messages = [{
-        "role" : "system",
-        "content" : SYSTEM_PROMPT
-    }]
+    system_prompt = SYSTEM_PROMPT_BASE + "\n\n" + LANG_INSTRUCTIONS[lang]
+
+    chat_messages = [{"role": "system", "content": system_prompt}]
     for msg in history:
-        chat_messages.append({"role" : msg.role , "content" : msg.content})
-    chat_messages.append({"role" : "user" , "content" : enriched_message})
-
+        chat_messages.append({"role": msg.role, "content": msg.content})
+    chat_messages.append({"role": "user", "content": enriched_message})
 
     try:
-    # Делаем запрос к Claude API
         response = client.chat.completions.create(
             model="llama-3.3-70b-versatile",
             messages=chat_messages,
             tools=tools,
             temperature=0.4,
-            max_tokens=1500
+            max_tokens=1500,
         )
-    # Возвращаем текст ответа
-        message = response.choices[0].message
-        if message.tool_calls:
-            chat_messages.append(message) 
-            for tool_call in message.tool_calls:
+        message_obj = response.choices[0].message
+
+        if message_obj.tool_calls:
+            chat_messages.append(message_obj)
+            for tool_call in message_obj.tool_calls:
                 function_name = tool_call.function.name
                 args = json.loads(tool_call.function.arguments)
 
-                if "item_comb" in args and args["item_comb"]: 
-                    clean_item = re.sub(r'\s+и\s+' , ' + ' , args["item_comb"])
+                # нормализация "и" → " + "
+                if "item_comb" in args and args["item_comb"]:
+                    clean_item = re.sub(r"\s+и\s+", " + ", args["item_comb"])
                     args["item_comb"] = clean_item.strip()
-                    
-                logger.info(f"Бот принял решение использовать {function_name}")
-                logger.info(f"Аргументы бота {args}")
+
+                logger.info("Бот вызывает tool=%s args=%s lang=%s", function_name, args, lang)
+
                 func_output = None
                 if function_name == "assessment_chances_list":
                     score = args.get("ent_score")
                     item = args.get("item_comb")
-                    quota = args.get("quota") 
-                    if score > 0 and item and item.strip() and quota and quota.strip():
+                    quota = args.get("quota")
+                    if score and score > 0 and item and item.strip() and quota and quota.strip():
                         func_output = assessment_chances_list(
-                        **args,
-                        db = db
+                            db=db,
+                            ent_score=score,
+                            item_comb=item,
+                            quota=quota,
+                            lang=lang,
                         )
                     else:
-                        func_output = "Ошибка данные неправильно указаны"
+                        func_output = {"error": "недостаточно данных"}
                 elif function_name == "get_by_item":
                     item_args = args.get("item_comb")
                     if item_args and item_args.strip():
-                        func_output = get_by_item(
-                        **args,
-                        db = db
-                        )
+                        func_output = get_by_item(item_comb=item_args, lang=lang, db=db)
                     else:
-                        func_output = "Ошибка: не указана комбинация предметов"
-                logger.info(f"Результат базы для бота {func_output}")
+                        func_output = {"error": "не указана комбинация предметов"}
+
                 chat_messages.append({
                     "role": "tool",
                     "tool_call_id": tool_call.id,
                     "name": function_name,
-                    "content": json.dumps(func_output, ensure_ascii=False)
+                    "content": json.dumps(func_output, ensure_ascii=False, default=str),
                 })
+
             final_response = client.chat.completions.create(
-                model = "llama-3.3-70b-versatile",
-                messages = chat_messages
+                model="llama-3.3-70b-versatile",
+                messages=chat_messages,
             )
             res_content = final_response.choices[0].message.content
-            return res_content if res_content else "Я получил данные , но не смог обработать . Попробуйте уточнить вопрос"
-        return message.content if message.content else "Извините, я не совсем понял ваш вопрос."
+            return res_content or "Я получил данные, но не смог обработать. Попробуйте уточнить вопрос."
+
+        return message_obj.content or "Извините, я не совсем понял ваш вопрос."
+
     except Exception as e:
-        print(f"Ошибка при запросе бота {e}")
+        logger.exception("Ошибка при запросе бота: %s", e)
         return "Повторите попытку"

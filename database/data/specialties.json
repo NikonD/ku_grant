@@ -1,0 +1,1283 @@
+[
+  {
+    "group_code": "B001",
+    "code": "6B01101",
+    "item_comb": "Биология + География",
+    "item_comb_i18n": {
+      "ru": "Биология + География",
+      "kk": "Биология + География",
+      "en": "Biology + Geography"
+    },
+    "name": {
+      "ru": "Педагогика и психология",
+      "kk": "Педагогика және психология",
+      "en": "Pedagogy and Psychology"
+    },
+    "description": {
+      "ru": "Подготовка педагогов-психологов для образовательных учреждений",
+      "kk": "Білім беру мекемелеріне педагог-психологтарды дайындау",
+      "en": "Training of teacher-psychologists for educational institutions"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B001",
+    "code": "6B01103",
+    "item_comb": "Биология + География",
+    "item_comb_i18n": {
+      "ru": "Биология + География",
+      "kk": "Биология + География",
+      "en": "Biology + Geography"
+    },
+    "name": {
+      "ru": "Психология в образовании (KZ)",
+      "kk": "Білім берудегі психология (KZ)",
+      "en": "Psychology in Education (KZ)"
+    },
+    "description": {
+      "ru": "Школьный психолог, обучение на казахском языке",
+      "kk": "Мектеп психологы, қазақ тілінде оқыту",
+      "en": "School psychologist, Kazakh-language program"
+    },
+    "price_paid": 2500000
+  },
+  {
+    "group_code": "B001",
+    "code": "6B01111",
+    "item_comb": "Биология + География",
+    "item_comb_i18n": {
+      "ru": "Биология + География",
+      "kk": "Биология + География",
+      "en": "Biology + Geography"
+    },
+    "name": {
+      "ru": "Психология в образовании (KZ-US)",
+      "kk": "Білім берудегі психология (KZ-US)",
+      "en": "Psychology in Education (KZ-US)"
+    },
+    "description": {
+      "ru": "Двойной диплом Казахстан-США: психология в образовании",
+      "kk": "Қазақстан-АҚШ қос дипломы: білім берудегі психология",
+      "en": "Kazakhstan-USA double-degree program in educational psychology"
+    },
+    "price_paid": 5000000
+  },
+  {
+    "group_code": "B003",
+    "code": "6B01301",
+    "item_comb": "Биология + География",
+    "item_comb_i18n": {
+      "ru": "Биология + География",
+      "kk": "Биология + География",
+      "en": "Biology + Geography"
+    },
+    "name": {
+      "ru": "Педагогика и методика начального обучения",
+      "kk": "Бастауыш оқытудың педагогикасы мен әдістемесі",
+      "en": "Pedagogy and Methodology of Primary Education"
+    },
+    "description": {
+      "ru": "Учитель начальных классов",
+      "kk": "Бастауыш сынып мұғалімі",
+      "en": "Primary school teacher"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B003",
+    "code": "6B01302",
+    "item_comb": "Биология + География",
+    "item_comb_i18n": {
+      "ru": "Биология + География",
+      "kk": "Биология + География",
+      "en": "Biology + Geography"
+    },
+    "name": {
+      "ru": "Начальное образование и инклюзивная практика (KZ)",
+      "kk": "Бастауыш білім беру және инклюзивті тәжірибе (KZ)",
+      "en": "Primary Education and Inclusive Practice (KZ)"
+    },
+    "description": {
+      "ru": "Учитель начальных классов с инклюзивной подготовкой, обучение на казахском",
+      "kk": "Инклюзивті дайындығы бар бастауыш сынып мұғалімі, қазақ тілінде оқыту",
+      "en": "Primary school teacher with inclusive education training, Kazakh-language program"
+    },
+    "price_paid": 2500000
+  },
+  {
+    "group_code": "B003",
+    "code": "6B01303",
+    "item_comb": "Биология + География",
+    "item_comb_i18n": {
+      "ru": "Биология + География",
+      "kk": "Биология + География",
+      "en": "Biology + Geography"
+    },
+    "name": {
+      "ru": "Начальное образование (IP)",
+      "kk": "Бастауыш білім беру (IP)",
+      "en": "Primary Education (IP)"
+    },
+    "description": {
+      "ru": "Инновационная программа подготовки учителей начальных классов",
+      "kk": "Бастауыш сынып мұғалімдерін дайындаудың инновациялық бағдарламасы",
+      "en": "Innovative program for training primary school teachers"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B003",
+    "code": "6B01311",
+    "item_comb": "Биология + География",
+    "item_comb_i18n": {
+      "ru": "Биология + География",
+      "kk": "Биология + География",
+      "en": "Biology + Geography"
+    },
+    "name": {
+      "ru": "Начальное образование и инклюзивная практика (KZ-US)",
+      "kk": "Бастауыш білім беру және инклюзивті тәжірибе (KZ-US)",
+      "en": "Primary Education and Inclusive Practice (KZ-US)"
+    },
+    "description": {
+      "ru": "Двойной диплом Казахстан-США: начальное образование и инклюзия",
+      "kk": "Қазақстан-АҚШ қос дипломы: бастауыш білім беру және инклюзия",
+      "en": "Kazakhstan-USA double-degree: primary education and inclusion"
+    },
+    "price_paid": 5000000
+  },
+  {
+    "group_code": "B005",
+    "code": "6B01401",
+    "item_comb": "Творческий экзамен",
+    "item_comb_i18n": {
+      "ru": "Творческий экзамен",
+      "kk": "Шығармашылық емтихан",
+      "en": "Creative Exam"
+    },
+    "name": {
+      "ru": "Физическая культура и спорт",
+      "kk": "Дене шынықтыру және спорт",
+      "en": "Physical Culture and Sports"
+    },
+    "description": {
+      "ru": "Учитель физической культуры и тренер",
+      "kk": "Дене шынықтыру мұғалімі және жаттықтырушы",
+      "en": "Physical education teacher and coach"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B005",
+    "code": "6B01404",
+    "item_comb": "Творческий экзамен",
+    "item_comb_i18n": {
+      "ru": "Творческий экзамен",
+      "kk": "Шығармашылық емтихан",
+      "en": "Creative Exam"
+    },
+    "name": {
+      "ru": "Физическая культура и начальная военная подготовка",
+      "kk": "Дене шынықтыру және алғашқы әскери дайындық",
+      "en": "Physical Culture and Initial Military Training"
+    },
+    "description": {
+      "ru": "Преподаватель ФК и руководитель НВП",
+      "kk": "Дене шынықтыру оқытушысы және алғашқы әскери дайындық жетекшісі",
+      "en": "PE instructor and head of initial military training"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B005",
+    "code": "6B01405",
+    "item_comb": "Творческий экзамен",
+    "item_comb_i18n": {
+      "ru": "Творческий экзамен",
+      "kk": "Шығармашылық емтихан",
+      "en": "Creative Exam"
+    },
+    "name": {
+      "ru": "Физическая культура и спорт (IP)",
+      "kk": "Дене шынықтыру және спорт (IP)",
+      "en": "Physical Culture and Sports (IP)"
+    },
+    "description": {
+      "ru": "Подготовка профессиональных тренеров и учителей спорта",
+      "kk": "Кәсіби жаттықтырушылар мен спорт мұғалімдерін дайындау",
+      "en": "Training of professional coaches and sports teachers"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B006",
+    "code": "6B01402",
+    "item_comb": "Творческий экзамен",
+    "item_comb_i18n": {
+      "ru": "Творческий экзамен",
+      "kk": "Шығармашылық емтихан",
+      "en": "Creative Exam"
+    },
+    "name": {
+      "ru": "Музыкальное образование",
+      "kk": "Музыкалық білім беру",
+      "en": "Music Education"
+    },
+    "description": {
+      "ru": "Учитель музыки в организациях образования",
+      "kk": "Білім беру ұйымдарындағы музыка мұғалімі",
+      "en": "Music teacher at educational institutions"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B006",
+    "code": "6B01406",
+    "item_comb": "Творческий экзамен",
+    "item_comb_i18n": {
+      "ru": "Творческий экзамен",
+      "kk": "Шығармашылық емтихан",
+      "en": "Creative Exam"
+    },
+    "name": {
+      "ru": "Музыкальное образование (IP)",
+      "kk": "Музыкалық білім беру (IP)",
+      "en": "Music Education (IP)"
+    },
+    "description": {
+      "ru": "Инновационная программа подготовки учителей музыки",
+      "kk": "Музыка мұғалімдерін дайындаудың инновациялық бағдарламасы",
+      "en": "Innovative program for training music teachers"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B009",
+    "code": "6B01516",
+    "item_comb": "Математика + Физика",
+    "item_comb_i18n": {
+      "ru": "Математика + Физика",
+      "kk": "Математика + Физика",
+      "en": "Mathematics + Physics"
+    },
+    "name": {
+      "ru": "Математика (IP)",
+      "kk": "Математика (IP)",
+      "en": "Mathematics (IP)"
+    },
+    "description": {
+      "ru": "Учитель математики для общеобразовательных школ",
+      "kk": "Жалпы білім беретін мектептерге арналған математика мұғалімі",
+      "en": "Mathematics teacher for secondary schools"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B010",
+    "code": "6B01515",
+    "item_comb": "Математика + Физика",
+    "item_comb_i18n": {
+      "ru": "Математика + Физика",
+      "kk": "Математика + Физика",
+      "en": "Mathematics + Physics"
+    },
+    "name": {
+      "ru": "Физика (IP)",
+      "kk": "Физика (IP)",
+      "en": "Physics (IP)"
+    },
+    "description": {
+      "ru": "Учитель физики для общеобразовательных школ",
+      "kk": "Жалпы білім беретін мектептерге арналған физика мұғалімі",
+      "en": "Physics teacher for secondary schools"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B011",
+    "code": "6B01517",
+    "item_comb": "Математика + Информатика",
+    "item_comb_i18n": {
+      "ru": "Математика + Информатика",
+      "kk": "Математика + Информатика",
+      "en": "Mathematics + Computer Science"
+    },
+    "name": {
+      "ru": "Информатика (IP)",
+      "kk": "Информатика (IP)",
+      "en": "Computer Science (IP)"
+    },
+    "description": {
+      "ru": "Учитель информатики и основ программирования",
+      "kk": "Информатика және бағдарламалау негіздерінің мұғалімі",
+      "en": "Teacher of computer science and basics of programming"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B012",
+    "code": "6B01519",
+    "item_comb": "Биология + Химия",
+    "item_comb_i18n": {
+      "ru": "Биология + Химия",
+      "kk": "Биология + Химия",
+      "en": "Biology + Chemistry"
+    },
+    "name": {
+      "ru": "Химия (IP)",
+      "kk": "Химия (IP)",
+      "en": "Chemistry (IP)"
+    },
+    "description": {
+      "ru": "Учитель химии для общеобразовательных школ",
+      "kk": "Жалпы білім беретін мектептерге арналған химия мұғалімі",
+      "en": "Chemistry teacher for secondary schools"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B013",
+    "code": "6B01513",
+    "item_comb": "Биология + Химия",
+    "item_comb_i18n": {
+      "ru": "Биология + Химия",
+      "kk": "Биология + Химия",
+      "en": "Biology + Chemistry"
+    },
+    "name": {
+      "ru": "Биология (IP)",
+      "kk": "Биология (IP)",
+      "en": "Biology (IP)"
+    },
+    "description": {
+      "ru": "Учитель биологии для общеобразовательных школ",
+      "kk": "Жалпы білім беретін мектептерге арналған биология мұғалімі",
+      "en": "Biology teacher for secondary schools"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B014",
+    "code": "6B01518",
+    "item_comb": "Всемирная история + География",
+    "item_comb_i18n": {
+      "ru": "Всемирная история + География",
+      "kk": "Дүниежүзі тарихы + География",
+      "en": "World History + Geography"
+    },
+    "name": {
+      "ru": "География (IP)",
+      "kk": "География (IP)",
+      "en": "Geography (IP)"
+    },
+    "description": {
+      "ru": "Учитель географии для общеобразовательных школ",
+      "kk": "Жалпы білім беретін мектептерге арналған география мұғалімі",
+      "en": "Geography teacher for secondary schools"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B015",
+    "code": "6B01602",
+    "item_comb": "Всемирная история + География",
+    "item_comb_i18n": {
+      "ru": "Всемирная история + География",
+      "kk": "Дүниежүзі тарихы + География",
+      "en": "World History + Geography"
+    },
+    "name": {
+      "ru": "История и обществознание (IP)",
+      "kk": "Тарих және қоғамтану (IP)",
+      "en": "History and Social Studies (IP)"
+    },
+    "description": {
+      "ru": "Учитель истории и обществознания",
+      "kk": "Тарих және қоғамтану мұғалімі",
+      "en": "Teacher of history and social studies"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B016",
+    "code": "6B01706",
+    "item_comb": "Казахский язык + Литература",
+    "item_comb_i18n": {
+      "ru": "Казахский язык + Литература",
+      "kk": "Қазақ тілі + Әдебиет",
+      "en": "Kazakh Language + Literature"
+    },
+    "name": {
+      "ru": "Казахский язык и литература (IP)",
+      "kk": "Қазақ тілі мен әдебиеті (IP)",
+      "en": "Kazakh Language and Literature (IP)"
+    },
+    "description": {
+      "ru": "Учитель казахского языка и литературы",
+      "kk": "Қазақ тілі мен әдебиеті мұғалімі",
+      "en": "Teacher of Kazakh language and literature"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B017",
+    "code": "6B01705",
+    "item_comb": "Русский язык + Литература",
+    "item_comb_i18n": {
+      "ru": "Русский язык + Литература",
+      "kk": "Орыс тілі + Әдебиет",
+      "en": "Russian Language + Literature"
+    },
+    "name": {
+      "ru": "Русский язык и литература в школах с русским и нерусским языками обучения (IP)",
+      "kk": "Орыс және орыс емес тілдерде оқытатын мектептердегі орыс тілі мен әдебиеті (IP)",
+      "en": "Russian Language and Literature in schools with Russian and non-Russian languages of instruction (IP)"
+    },
+    "description": {
+      "ru": "Учитель русского языка и литературы",
+      "kk": "Орыс тілі мен әдебиеті мұғалімі",
+      "en": "Teacher of Russian language and literature"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B018",
+    "code": "6B01704",
+    "item_comb": "Иностранный язык + Всемирная история",
+    "item_comb_i18n": {
+      "ru": "Иностранный язык + Всемирная история",
+      "kk": "Шетел тілі + Дүниежүзі тарихы",
+      "en": "Foreign Language + World History"
+    },
+    "name": {
+      "ru": "Иностранные языки (IP)",
+      "kk": "Шетел тілдері (IP)",
+      "en": "Foreign Languages (IP)"
+    },
+    "description": {
+      "ru": "Учитель иностранного языка",
+      "kk": "Шетел тілі мұғалімі",
+      "en": "Foreign language teacher"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B020",
+    "code": "6B01906",
+    "item_comb": "Биология + География",
+    "item_comb_i18n": {
+      "ru": "Биология + География",
+      "kk": "Биология + География",
+      "en": "Biology + Geography"
+    },
+    "name": {
+      "ru": "Специальная педагогика",
+      "kk": "Арнайы педагогика",
+      "en": "Special Pedagogy"
+    },
+    "description": {
+      "ru": "Работа с детьми с особыми образовательными потребностями",
+      "kk": "Ерекше білім беруді қажет ететін балалармен жұмыс",
+      "en": "Working with children with special educational needs"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B020",
+    "code": "6B01907",
+    "item_comb": "Биология + География",
+    "item_comb_i18n": {
+      "ru": "Биология + География",
+      "kk": "Биология + География",
+      "en": "Biology + Geography"
+    },
+    "name": {
+      "ru": "Специальная педагогика и инклюзивная практика (KZ)",
+      "kk": "Арнайы педагогика және инклюзивті тәжірибе (KZ)",
+      "en": "Special Pedagogy and Inclusive Practice (KZ)"
+    },
+    "description": {
+      "ru": "Специальная и инклюзивная педагогика, обучение на казахском",
+      "kk": "Арнайы және инклюзивті педагогика, қазақ тілінде оқыту",
+      "en": "Special and inclusive pedagogy, Kazakh-language program"
+    },
+    "price_paid": 2500000
+  },
+  {
+    "group_code": "B020",
+    "code": "6B01908",
+    "item_comb": "Биология + География",
+    "item_comb_i18n": {
+      "ru": "Биология + География",
+      "kk": "Биология + География",
+      "en": "Biology + Geography"
+    },
+    "name": {
+      "ru": "Специальная педагогика (IP)",
+      "kk": "Арнайы педагогика (IP)",
+      "en": "Special Pedagogy (IP)"
+    },
+    "description": {
+      "ru": "Инновационная программа специальной педагогики",
+      "kk": "Арнайы педагогиканың инновациялық бағдарламасы",
+      "en": "Innovative special pedagogy program"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B020",
+    "code": "6B01911",
+    "item_comb": "Биология + География",
+    "item_comb_i18n": {
+      "ru": "Биология + География",
+      "kk": "Биология + География",
+      "en": "Biology + Geography"
+    },
+    "name": {
+      "ru": "Специальная педагогика и инклюзивная практика (KZ-US)",
+      "kk": "Арнайы педагогика және инклюзивті тәжірибе (KZ-US)",
+      "en": "Special Pedagogy and Inclusive Practice (KZ-US)"
+    },
+    "description": {
+      "ru": "Двойной диплом Казахстан-США: специальная педагогика",
+      "kk": "Қазақстан-АҚШ қос дипломы: арнайы педагогика",
+      "en": "Kazakhstan-USA double-degree: special pedagogy"
+    },
+    "price_paid": 5000000
+  },
+  {
+    "group_code": "B031",
+    "code": "6B02101",
+    "item_comb": "Творческий экзамен",
+    "item_comb_i18n": {
+      "ru": "Творческий экзамен",
+      "kk": "Шығармашылық емтихан",
+      "en": "Creative Exam"
+    },
+    "name": {
+      "ru": "Дизайн",
+      "kk": "Дизайн",
+      "en": "Design"
+    },
+    "description": {
+      "ru": "Графический, промышленный и интерьерный дизайн",
+      "kk": "Графикалық, өнеркәсіптік және интерьер дизайны",
+      "en": "Graphic, industrial and interior design"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B036",
+    "code": "6B02302",
+    "item_comb": "Иностранный язык + Всемирная история",
+    "item_comb_i18n": {
+      "ru": "Иностранный язык + Всемирная история",
+      "kk": "Шетел тілі + Дүниежүзі тарихы",
+      "en": "Foreign Language + World History"
+    },
+    "name": {
+      "ru": "Иностранная филология",
+      "kk": "Шетел филологиясы",
+      "en": "Foreign Philology"
+    },
+    "description": {
+      "ru": "Изучение языков, литературы и культуры зарубежных стран",
+      "kk": "Шет елдердің тілдерін, әдебиетін және мәдениетін зерттеу",
+      "en": "Study of foreign languages, literature and culture"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B036",
+    "code": "6B02303",
+    "item_comb": "Иностранный язык + Всемирная история",
+    "item_comb_i18n": {
+      "ru": "Иностранный язык + Всемирная история",
+      "kk": "Шетел тілі + Дүниежүзі тарихы",
+      "en": "Foreign Language + World History"
+    },
+    "name": {
+      "ru": "Переводческое дело",
+      "kk": "Аударма ісі",
+      "en": "Translation Studies"
+    },
+    "description": {
+      "ru": "Профессиональный перевод и межкультурная коммуникация",
+      "kk": "Кәсіби аударма және мәдениетаралық коммуникация",
+      "en": "Professional translation and intercultural communication"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B042",
+    "code": "6B03201",
+    "item_comb": "Творческий экзамен",
+    "item_comb_i18n": {
+      "ru": "Творческий экзамен",
+      "kk": "Шығармашылық емтихан",
+      "en": "Creative Exam"
+    },
+    "name": {
+      "ru": "Журналистика",
+      "kk": "Журналистика",
+      "en": "Journalism"
+    },
+    "description": {
+      "ru": "СМИ, репортерская деятельность и связи с общественностью",
+      "kk": "БАҚ, репортерлік қызмет және қоғаммен байланыс",
+      "en": "Mass media, reporting and public relations"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B046",
+    "code": "6B04104",
+    "item_comb": "Математика + География",
+    "item_comb_i18n": {
+      "ru": "Математика + География",
+      "kk": "Математика + География",
+      "en": "Mathematics + Geography"
+    },
+    "name": {
+      "ru": "Финансы",
+      "kk": "Қаржы",
+      "en": "Finance"
+    },
+    "description": {
+      "ru": "Управление финансами, банковское и страховое дело",
+      "kk": "Қаржыны басқару, банк және сақтандыру ісі",
+      "en": "Financial management, banking and insurance"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B046",
+    "code": "6B04108",
+    "item_comb": "Математика + География",
+    "item_comb_i18n": {
+      "ru": "Математика + География",
+      "kk": "Математика + География",
+      "en": "Mathematics + Geography"
+    },
+    "name": {
+      "ru": "Бизнес и менеджмент (KZ)",
+      "kk": "Бизнес және менеджмент (KZ)",
+      "en": "Business and Management (KZ)"
+    },
+    "description": {
+      "ru": "Управление бизнес-процессами, обучение на казахском",
+      "kk": "Бизнес-процестерді басқару, қазақ тілінде оқыту",
+      "en": "Business process management, Kazakh-language program"
+    },
+    "price_paid": 2500000
+  },
+  {
+    "group_code": "B046",
+    "code": "6B04111",
+    "item_comb": "Математика + География",
+    "item_comb_i18n": {
+      "ru": "Математика + География",
+      "kk": "Математика + География",
+      "en": "Mathematics + Geography"
+    },
+    "name": {
+      "ru": "Бизнес и менеджмент (KZ-US)",
+      "kk": "Бизнес және менеджмент (KZ-US)",
+      "en": "Business and Management (KZ-US)"
+    },
+    "description": {
+      "ru": "Двойной диплом Казахстан-США: бизнес и менеджмент",
+      "kk": "Қазақстан-АҚШ қос дипломы: бизнес және менеджмент",
+      "en": "Kazakhstan-USA double-degree: business and management"
+    },
+    "price_paid": 5000000
+  },
+  {
+    "group_code": "B049",
+    "code": "6B04201",
+    "item_comb": "Всемирная история + Основы права",
+    "item_comb_i18n": {
+      "ru": "Всемирная история + Основы права",
+      "kk": "Дүниежүзі тарихы + Құқық негіздері",
+      "en": "World History + Basics of Law"
+    },
+    "name": {
+      "ru": "Юриспруденция",
+      "kk": "Құқықтану",
+      "en": "Jurisprudence"
+    },
+    "description": {
+      "ru": "Правовое регулирование и юридическая практика",
+      "kk": "Құқықтық реттеу және заңгерлік практика",
+      "en": "Legal regulation and legal practice"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B050",
+    "code": "6B05103",
+    "item_comb": "Биология + Химия",
+    "item_comb_i18n": {
+      "ru": "Биология + Химия",
+      "kk": "Биология + Химия",
+      "en": "Biology + Chemistry"
+    },
+    "name": {
+      "ru": "Биотехнология (KZ)",
+      "kk": "Биотехнология (KZ)",
+      "en": "Biotechnology (KZ)"
+    },
+    "description": {
+      "ru": "Применение биологических процессов в производстве",
+      "kk": "Өндірісте биологиялық процестерді қолдану",
+      "en": "Application of biological processes in industry"
+    },
+    "price_paid": 2500000
+  },
+  {
+    "group_code": "B050",
+    "code": "6B05111",
+    "item_comb": "Биология + Химия",
+    "item_comb_i18n": {
+      "ru": "Биология + Химия",
+      "kk": "Биология + Химия",
+      "en": "Biology + Chemistry"
+    },
+    "name": {
+      "ru": "Биотехнология (KZ-US)",
+      "kk": "Биотехнология (KZ-US)",
+      "en": "Biotechnology (KZ-US)"
+    },
+    "description": {
+      "ru": "Двойной диплом Казахстан-США по биотехнологиям",
+      "kk": "Қазақстан-АҚШ биотехнология қос дипломы",
+      "en": "Kazakhstan-USA double-degree in biotechnology"
+    },
+    "price_paid": 5000000
+  },
+  {
+    "group_code": "B051",
+    "code": "6B05202",
+    "item_comb": "Биология + География",
+    "item_comb_i18n": {
+      "ru": "Биология + География",
+      "kk": "Биология + География",
+      "en": "Biology + Geography"
+    },
+    "name": {
+      "ru": "Экология",
+      "kk": "Экология",
+      "en": "Ecology"
+    },
+    "description": {
+      "ru": "Охрана окружающей среды и рациональное природопользование",
+      "kk": "Қоршаған ортаны қорғау және табиғатты тиімді пайдалану",
+      "en": "Environmental protection and sustainable natural resource use"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B052",
+    "code": "6B05203",
+    "item_comb": "Математика + География",
+    "item_comb_i18n": {
+      "ru": "Математика + География",
+      "kk": "Математика + География",
+      "en": "Mathematics + Geography"
+    },
+    "name": {
+      "ru": "География и природопользование",
+      "kk": "География және табиғатты пайдалану",
+      "en": "Geography and Natural Resource Management"
+    },
+    "description": {
+      "ru": "Изучение природных ресурсов и географических систем",
+      "kk": "Табиғи ресурстарды және географиялық жүйелерді зерттеу",
+      "en": "Study of natural resources and geographic systems"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B053",
+    "code": "6B05307",
+    "item_comb": "Биология + Химия",
+    "item_comb_i18n": {
+      "ru": "Биология + Химия",
+      "kk": "Биология + Химия",
+      "en": "Biology + Chemistry"
+    },
+    "name": {
+      "ru": "Химическая экспертиза и аналитический контроль производства (KZ)",
+      "kk": "Химиялық сараптама және өндірісті аналитикалық бақылау (KZ)",
+      "en": "Chemical Expertise and Analytical Production Control (KZ)"
+    },
+    "description": {
+      "ru": "Контроль качества продукции и химический анализ",
+      "kk": "Өнім сапасын бақылау және химиялық талдау",
+      "en": "Product quality control and chemical analysis"
+    },
+    "price_paid": 2500000
+  },
+  {
+    "group_code": "B054",
+    "code": "6B05308",
+    "item_comb": "Математика + Физика",
+    "item_comb_i18n": {
+      "ru": "Математика + Физика",
+      "kk": "Математика + Физика",
+      "en": "Mathematics + Physics"
+    },
+    "name": {
+      "ru": "Астрономия и методы дистанционных исследований (KZ)",
+      "kk": "Астрономия және қашықтан зерттеу әдістері (KZ)",
+      "en": "Astronomy and Remote Sensing Methods (KZ)"
+    },
+    "description": {
+      "ru": "Астрономия и методы зондирования Земли",
+      "kk": "Астрономия және Жерді қашықтан зондтау әдістері",
+      "en": "Astronomy and Earth remote sensing methods"
+    },
+    "price_paid": 2500000
+  },
+  {
+    "group_code": "B057",
+    "code": "6B06102",
+    "item_comb": "Математика + Информатика",
+    "item_comb_i18n": {
+      "ru": "Математика + Информатика",
+      "kk": "Математика + Информатика",
+      "en": "Mathematics + Computer Science"
+    },
+    "name": {
+      "ru": "Информационные системы",
+      "kk": "Ақпараттық жүйелер",
+      "en": "Information Systems"
+    },
+    "description": {
+      "ru": "Проектирование и эксплуатация информационных систем",
+      "kk": "Ақпараттық жүйелерді жобалау және пайдалану",
+      "en": "Design and operation of information systems"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B057",
+    "code": "6B06106",
+    "item_comb": "Математика + Информатика",
+    "item_comb_i18n": {
+      "ru": "Математика + Информатика",
+      "kk": "Математика + Информатика",
+      "en": "Mathematics + Computer Science"
+    },
+    "name": {
+      "ru": "Информационные системы в управлении (KZ)",
+      "kk": "Басқарудағы ақпараттық жүйелер (KZ)",
+      "en": "Information Systems in Management (KZ)"
+    },
+    "description": {
+      "ru": "ИТ-решения для управления бизнес-структурами",
+      "kk": "Бизнес-құрылымдарды басқаруға арналған АТ шешімдері",
+      "en": "IT solutions for business management"
+    },
+    "price_paid": 2500000
+  },
+  {
+    "group_code": "B057",
+    "code": "6B06111",
+    "item_comb": "Математика + Информатика",
+    "item_comb_i18n": {
+      "ru": "Математика + Информатика",
+      "kk": "Математика + Информатика",
+      "en": "Mathematics + Computer Science"
+    },
+    "name": {
+      "ru": "Информационные системы в управлении (KZ-US)",
+      "kk": "Басқарудағы ақпараттық жүйелер (KZ-US)",
+      "en": "Information Systems in Management (KZ-US)"
+    },
+    "description": {
+      "ru": "Двойной диплом Казахстан-США: информационные системы",
+      "kk": "Қазақстан-АҚШ қос дипломы: ақпараттық жүйелер",
+      "en": "Kazakhstan-USA double-degree: information systems"
+    },
+    "price_paid": 5000000
+  },
+  {
+    "group_code": "B059",
+    "code": "6B06201",
+    "item_comb": "Математика + Физика",
+    "item_comb_i18n": {
+      "ru": "Математика + Физика",
+      "kk": "Математика + Физика",
+      "en": "Mathematics + Physics"
+    },
+    "name": {
+      "ru": "Радиотехника, электроника и телекоммуникации",
+      "kk": "Радиотехника, электроника және телекоммуникациялар",
+      "en": "Radio Engineering, Electronics and Telecommunications"
+    },
+    "description": {
+      "ru": "Системы связи, радиопередача и электроника",
+      "kk": "Байланыс жүйелері, радио хабар тарату және электроника",
+      "en": "Communication systems, radio broadcasting and electronics"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B059",
+    "code": "6B06203",
+    "item_comb": "Математика + Физика",
+    "item_comb_i18n": {
+      "ru": "Математика + Физика",
+      "kk": "Математика + Физика",
+      "en": "Mathematics + Physics"
+    },
+    "name": {
+      "ru": "Электроника и телекоммуникации (KZ)",
+      "kk": "Электроника және телекоммуникациялар (KZ)",
+      "en": "Electronics and Telecommunications (KZ)"
+    },
+    "description": {
+      "ru": "Разработка электронных устройств и сетей связи",
+      "kk": "Электрондық құрылғыларды және байланыс желілерін әзірлеу",
+      "en": "Development of electronic devices and communication networks"
+    },
+    "price_paid": 2500000
+  },
+  {
+    "group_code": "B062",
+    "code": "6B07103",
+    "item_comb": "Математика + Физика",
+    "item_comb_i18n": {
+      "ru": "Математика + Физика",
+      "kk": "Математика + Физика",
+      "en": "Mathematics + Physics"
+    },
+    "name": {
+      "ru": "Электроэнергетика",
+      "kk": "Электр энергетикасы",
+      "en": "Electric Power Engineering"
+    },
+    "description": {
+      "ru": "Генерация, передача и распределение электроэнергии",
+      "kk": "Электр энергиясын өндіру, беру және тарату",
+      "en": "Generation, transmission and distribution of electric power"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B063",
+    "code": "6B07109",
+    "item_comb": "Математика + Физика",
+    "item_comb_i18n": {
+      "ru": "Математика + Физика",
+      "kk": "Математика + Физика",
+      "en": "Mathematics + Physics"
+    },
+    "name": {
+      "ru": "Робототехнические и интеллектуальные системы",
+      "kk": "Робототехникалық және интеллектуалды жүйелер",
+      "en": "Robotic and Intelligent Systems"
+    },
+    "description": {
+      "ru": "Разработка автономных роботов и ИИ-систем",
+      "kk": "Автономды роботтар мен ЖИ жүйелерін әзірлеу",
+      "en": "Development of autonomous robots and AI systems"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B064",
+    "code": "6B07106",
+    "item_comb": "Математика + Физика",
+    "item_comb_i18n": {
+      "ru": "Математика + Физика",
+      "kk": "Математика + Физика",
+      "en": "Mathematics + Physics"
+    },
+    "name": {
+      "ru": "Робототехнические, интеллектуальные системы и приборостроение",
+      "kk": "Робототехникалық, интеллектуалды жүйелер және аспап жасау",
+      "en": "Robotics, Intelligent Systems and Instrument Engineering"
+    },
+    "description": {
+      "ru": "Проектирование приборов и роботов",
+      "kk": "Аспаптар мен роботтарды жобалау",
+      "en": "Design of instruments and robots"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B064",
+    "code": "6B07108",
+    "item_comb": "Математика + Физика",
+    "item_comb_i18n": {
+      "ru": "Математика + Физика",
+      "kk": "Математика + Физика",
+      "en": "Mathematics + Physics"
+    },
+    "name": {
+      "ru": "Робототехника и инновационные технологии в машиностроении",
+      "kk": "Машина жасаудағы робототехника және инновациялық технологиялар",
+      "en": "Robotics and Innovative Technologies in Mechanical Engineering"
+    },
+    "description": {
+      "ru": "Автоматизация машиностроительных производств",
+      "kk": "Машина жасау өндірісін автоматтандыру",
+      "en": "Automation of mechanical engineering production"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B065",
+    "code": "6B07105",
+    "item_comb": "Математика + Физика",
+    "item_comb_i18n": {
+      "ru": "Математика + Физика",
+      "kk": "Математика + Физика",
+      "en": "Mathematics + Physics"
+    },
+    "name": {
+      "ru": "Транспорт, транспортная техника и технологии",
+      "kk": "Көлік, көлік техникасы және технологиялары",
+      "en": "Transport, Transport Equipment and Technologies"
+    },
+    "description": {
+      "ru": "Эксплуатация и ремонт транспортных средств",
+      "kk": "Көлік құралдарын пайдалану және жөндеу",
+      "en": "Operation and maintenance of vehicles"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B065",
+    "code": "6B07107",
+    "item_comb": "Математика + Физика",
+    "item_comb_i18n": {
+      "ru": "Математика + Физика",
+      "kk": "Математика + Физика",
+      "en": "Mathematics + Physics"
+    },
+    "name": {
+      "ru": "Техническая эксплуатация, обслуживание и ремонт вагонов",
+      "kk": "Вагондарды техникалық пайдалану, қызмет көрсету және жөндеу",
+      "en": "Technical Operation, Maintenance and Repair of Railway Cars"
+    },
+    "description": {
+      "ru": "Обслуживание железнодорожного подвижного состава",
+      "kk": "Теміржол жылжымалы құрамына қызмет көрсету",
+      "en": "Maintenance of railway rolling stock"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B068",
+    "code": "6B07201",
+    "item_comb": "Биология + Химия",
+    "item_comb_i18n": {
+      "ru": "Биология + Химия",
+      "kk": "Биология + Химия",
+      "en": "Biology + Chemistry"
+    },
+    "name": {
+      "ru": "Технология продовольственных продуктов",
+      "kk": "Азық-түлік өнімдерінің технологиясы",
+      "en": "Food Technology"
+    },
+    "description": {
+      "ru": "Производство и безопасность продуктов питания",
+      "kk": "Тамақ өнімдерін өндіру және қауіпсіздігі",
+      "en": "Food production and safety"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B074",
+    "code": "6B07301",
+    "item_comb": "Математика + Физика",
+    "item_comb_i18n": {
+      "ru": "Математика + Физика",
+      "kk": "Математика + Физика",
+      "en": "Mathematics + Physics"
+    },
+    "name": {
+      "ru": "Строительство",
+      "kk": "Құрылыс",
+      "en": "Construction"
+    },
+    "description": {
+      "ru": "Промышленное и гражданское строительство",
+      "kk": "Өнеркәсіптік және азаматтық құрылыс",
+      "en": "Industrial and civil construction"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B074",
+    "code": "6B07302",
+    "item_comb": "Математика + Физика",
+    "item_comb_i18n": {
+      "ru": "Математика + Физика",
+      "kk": "Математика + Физика",
+      "en": "Mathematics + Physics"
+    },
+    "name": {
+      "ru": "Проектирование и информационное моделирование объектов строительства",
+      "kk": "Құрылыс объектілерін жобалау және ақпараттық модельдеу",
+      "en": "Design and Information Modeling of Construction Objects"
+    },
+    "description": {
+      "ru": "Цифровое проектирование и BIM-моделирование",
+      "kk": "Цифрлық жобалау және BIM-модельдеу",
+      "en": "Digital design and BIM modeling"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B076",
+    "code": "6B07504",
+    "item_comb": "Математика + Физика",
+    "item_comb_i18n": {
+      "ru": "Математика + Физика",
+      "kk": "Математика + Физика",
+      "en": "Mathematics + Physics"
+    },
+    "name": {
+      "ru": "Инжиниринг и инновационно-измерительные технологии",
+      "kk": "Инжиниринг және инновациялық-өлшеу технологиялары",
+      "en": "Engineering and Innovative Measurement Technologies"
+    },
+    "description": {
+      "ru": "Метрология, стандартизация и измерительная техника",
+      "kk": "Метрология, стандарттау және өлшеу техникасы",
+      "en": "Metrology, standardization and measurement technology"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B077",
+    "code": "6B08101",
+    "item_comb": "Биология + Химия",
+    "item_comb_i18n": {
+      "ru": "Биология + Химия",
+      "kk": "Биология + Химия",
+      "en": "Biology + Chemistry"
+    },
+    "name": {
+      "ru": "Агрономия",
+      "kk": "Агрономия",
+      "en": "Agronomy"
+    },
+    "description": {
+      "ru": "Технологии возделывания сельскохозяйственных культур",
+      "kk": "Ауыл шаруашылығы дақылдарын өсіру технологиялары",
+      "en": "Technologies for cultivating agricultural crops"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B077",
+    "code": "6B08104",
+    "item_comb": "Биология + Химия",
+    "item_comb_i18n": {
+      "ru": "Биология + Химия",
+      "kk": "Биология + Химия",
+      "en": "Biology + Chemistry"
+    },
+    "name": {
+      "ru": "Наука о растениях и технологии (KZ)",
+      "kk": "Өсімдіктану ғылымы және технологиялары (KZ)",
+      "en": "Plant Science and Technology (KZ)"
+    },
+    "description": {
+      "ru": "Инновационные методы в растениеводстве",
+      "kk": "Өсімдік шаруашылығындағы инновациялық әдістер",
+      "en": "Innovative methods in crop production"
+    },
+    "price_paid": 2500000
+  },
+  {
+    "group_code": "B078",
+    "code": "6B08201",
+    "item_comb": "Биология + Химия",
+    "item_comb_i18n": {
+      "ru": "Биология + Химия",
+      "kk": "Биология + Химия",
+      "en": "Biology + Chemistry"
+    },
+    "name": {
+      "ru": "Технология производства продуктов животноводства",
+      "kk": "Мал шаруашылығы өнімдерін өндіру технологиясы",
+      "en": "Animal Husbandry Production Technology"
+    },
+    "description": {
+      "ru": "Разведение скота и переработка продукции",
+      "kk": "Мал өсіру және өнімді өңдеу",
+      "en": "Livestock breeding and product processing"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B079",
+    "code": "6B08301",
+    "item_comb": "Биология + География",
+    "item_comb_i18n": {
+      "ru": "Биология + География",
+      "kk": "Биология + География",
+      "en": "Biology + Geography"
+    },
+    "name": {
+      "ru": "Лесные ресурсы и лесоводство",
+      "kk": "Орман ресурстары және орман шаруашылығы",
+      "en": "Forest Resources and Forestry"
+    },
+    "description": {
+      "ru": "Охрана и воспроизводство лесных массивов",
+      "kk": "Орман алқаптарын қорғау және молайту",
+      "en": "Forest conservation and reforestation"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B091",
+    "code": "6B11102",
+    "item_comb": "География + Иностранный язык",
+    "item_comb_i18n": {
+      "ru": "География + Иностранный язык",
+      "kk": "География + Шетел тілі",
+      "en": "Geography + Foreign Language"
+    },
+    "name": {
+      "ru": "Туризм",
+      "kk": "Туризм",
+      "en": "Tourism"
+    },
+    "description": {
+      "ru": "Организация туристических услуг и маршрутов",
+      "kk": "Туристік қызметтер мен бағыттарды ұйымдастыру",
+      "en": "Organization of tourism services and routes"
+    },
+    "price_paid": 671550
+  },
+  {
+    "group_code": "B092",
+    "code": "6B11101",
+    "item_comb": "Творческий экзамен",
+    "item_comb_i18n": {
+      "ru": "Творческий экзамен",
+      "kk": "Шығармашылық емтихан",
+      "en": "Creative Exam"
+    },
+    "name": {
+      "ru": "Культурно-досуговая работа",
+      "kk": "Мәдени-демалыс жұмысы",
+      "en": "Cultural and Leisure Activities"
+    },
+    "description": {
+      "ru": "Организация культурных и праздничных мероприятий",
+      "kk": "Мәдени және мерекелік іс-шараларды ұйымдастыру",
+      "en": "Organization of cultural and festive events"
+    },
+    "price_paid": 671550
+  }
+]

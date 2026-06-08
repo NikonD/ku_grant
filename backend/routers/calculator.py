@@ -2,31 +2,38 @@
 # routers/calculator.py — API эндпоинт калькулятора вероятности
 # ============================================================
 
-from fastapi import APIRouter, Depends, HTTPException
+import logging
+from typing import Optional
+
+from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 
-import logging
 from database import get_db
-from models.schemas import AssessmentChanceRequest , AssessmentChanceResponse
-from services.calculator_service import assessment_chances_list 
+from models.schemas import AssessmentChanceRequest, AssessmentChanceResponse
+from services.calculator_service import assessment_chances_list
 from logger_config import app_logging
-router = APIRouter()
 
+router = APIRouter()
 app_logging()
 logger = logging.getLogger(__name__)
 
 
-@router.post("/assessment" , response_model=AssessmentChanceResponse)
-def assessment_chance(request : AssessmentChanceRequest, db : Session = Depends(get_db)):
-    logger.info("Запрос оценки шанса")
-    logger.info("Отправка по AssessmentChanceRequest")
-    # Проверяем квоту
-    logger.info("Образещение к calculator_service по assessment_chances_list")
-    chances_result = assessment_chances_list(
+@router.post("/assessment", response_model=AssessmentChanceResponse)
+def assessment_chance(
+    request: AssessmentChanceRequest,
+    lang: Optional[str] = Query(default=None),
+    db: Session = Depends(get_db),
+):
+    """Расчёт шансов поступления.
+
+    Язык можно передать как query (?lang=kk) или в теле запроса (поле lang).
+    """
+    effective_lang = request.lang or lang
+    logger.info("Запрос оценки шанса, lang=%s", effective_lang)
+    return assessment_chances_list(
         db=db,
         ent_score=request.ent_score,
         item_comb=request.item_comb,
-        quota=request.quota
+        quota=request.quota,
+        lang=effective_lang,
     )
-    logger.info("Получение результата по эндпоинту calculator")
-    return chances_result

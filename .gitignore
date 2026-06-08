@@ -70,4 +70,7 @@ Thumbs.db
 # Docker overrides
 docker-compose.override.yml
 .swarm
-.claude-flow
+.claude-flow/
+CLAUDE.md
+.claude/
+dumps/

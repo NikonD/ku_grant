@@ -1,0 +1,152 @@
+{
+  "header": {
+    "logoAlt": "Kozybayev University",
+    "title": "AI Assistant for Applicants — Kozybayev",
+    "description": "Calculate the probability of winning a state grant at M. Kozybayev University"
+  },
+  "languageSwitcher": {
+    "ru": "Русский",
+    "kk": "Қазақша",
+    "en": "English",
+    "ariaLabel": "Language selection"
+  },
+  "calculator": {
+    "title": "Grant Calculator",
+    "subtitle": "M. Kozybayev University",
+    "entScore": "UNT score",
+    "entScorePlaceholder": "For example: 95",
+    "subject1": "First profile subject",
+    "subject2": "Second profile subject",
+    "pickSubject": "— Pick a subject —",
+    "pickSubject2": "— Pick the second subject —",
+    "pickFirstFirst": "Pick the first one first",
+    "available": "{{count}} options available for «{{subject}}»",
+    "pair": "Combination: {{comb}}",
+    "quota": "Admission quota",
+    "quotaPercent": "{{percent}}% of grants go through this quota",
+    "submit": "Calculate probability",
+    "loading": "Loading...",
+    "errors": {
+      "score": "Enter a valid UNT score from 0 to 140",
+      "sub1": "Pick the first profile subject",
+      "sub2": "Pick the second profile subject",
+      "pair": "The chosen subject combination is not allowed",
+      "server": "Server error: {{message}}. Make sure the backend is running."
+    }
+  },
+  "subjects": {
+    "Биология": "Biology",
+    "География": "Geography",
+    "Всемирная история": "World History",
+    "Основы права": "Basics of Law",
+    "Иностранный язык": "Foreign Language",
+    "Казахский язык": "Kazakh Language",
+    "Казахская литература": "Kazakh Literature",
+    "Русский язык": "Russian Language",
+    "Русская литература": "Russian Literature",
+    "Математика": "Mathematics",
+    "Информатика": "Computer Science",
+    "Физика": "Physics",
+    "Химия": "Chemistry",
+    "Творческий экзамен": "Creative Exam"
+  },
+  "quotas": {
+    "общий": {
+      "label": "General competition",
+      "note": "Standard competition without benefits"
+    },
+    "сельская": {
+      "label": "Rural youth",
+      "note": "35% of all grants — the largest quota"
+    },
+    "rural_move": {
+      "label": "Rural youth → relocation to priority regions",
+      "note": "Relocation to regions defined by the Government of Kazakhstan"
+    },
+    "large_family": {
+      "label": "Children from large families (4+ children)",
+      "note": "Families raising four or more minor children"
+    },
+    "kazakh_diaspora": {
+      "label": "Ethnic Kazakhs — non-citizens of Kazakhstan",
+      "note": "Ethnic Kazakhs who are not citizens of Kazakhstan"
+    },
+    "disability_self": {
+      "label": "Disability group I or II / since childhood",
+      "note": "Citizens with disability of group I or II"
+    },
+    "disability_family": {
+      "label": "Family raising a child with disabilities",
+      "note": "Children from families raising children with disabilities"
+    },
+    "orphan": {
+      "label": "Orphans / without parental care",
+      "note": "Orphans and children left without parental care"
+    },
+    "single_parent": {
+      "label": "Children from single-parent families (status ≥3 years)",
+      "note": "Children from single-parent families with the status for at least 3 years"
+    },
+    "veteran": {
+      "label": "Combat veterans",
+      "note": "Veterans of combat operations on the territory of other states"
+    }
+  },
+  "result": {
+    "title": "Calculation results",
+    "score": "Score",
+    "found": "Found",
+    "highChance": "Chance ≥50%",
+    "fallbackNotice": "Programs marked with (∗) had no applications under this quota in 2025 — the calculation falls back to the general competition.",
+    "best": "⭐ Best option",
+    "threshold": "threshold ~{{score}} pts",
+    "footer": "💡 Probability is calculated from historical passing scores and the quotas set by the Ministry of Science and Higher Education of Kazakhstan. Verify the data with the university admissions office.",
+    "thresholdNotice": "{{count}} specialties hidden: your score is below the grant competition threshold (Ministry of Science: Pedagogy and Law — 75, Medicine — 70, Technical and Agriculture — 50).",
+    "badges": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "average": "Average",
+      "low": "Low"
+    }
+  },
+  "info": {
+    "title": "How to use the calculator",
+    "desc": "Fill in the form on the left — you will see every Kozybayev University specialty matching your profile subjects, with the probability of being awarded a state grant.",
+    "stepsHeading": "About the calculator",
+    "steps": [
+      {
+        "title": "Enter your UNT score",
+        "desc": "Provide the total score you received on the Unified National Testing. The maximum is 140 points."
+      },
+      {
+        "title": "Pick the subjects",
+        "desc": "Pick the first profile subject, then the second. The system will offer only the allowed combinations."
+      },
+      {
+        "title": "Choose your quota",
+        "desc": "Pick the category you are eligible for. The quota directly affects the passing threshold."
+      },
+      {
+        "title": "Get the result",
+        "desc": "Press the button — the right side will show every specialty with its individual grant probability."
+      }
+    ],
+    "facts": [
+      "61 Kozybayev University specialties with active grants",
+      "Sigmoid model based on 2025 historical passing scores",
+      "10 active Ministry of Science quotas",
+      "AI chat helps you pick a specialty"
+    ],
+    "chatHint": {
+      "title": "Need help choosing?",
+      "text": "Tap the chat button in the bottom-right corner — the AI assistant will walk you through the specialties and answer admission questions."
+    }
+  },
+  "chat": {
+    "greeting": "Hi! 👋 I'm the Kozybayev University AI assistant. I can help you pick a specialty and figure out admissions. What would you like to know?",
+    "name": "AI assistant",
+    "status": "● Online",
+    "placeholder": "Type your question...",
+    "error": "❌ Connection error. Make sure the backend is running."
+  }
+}
