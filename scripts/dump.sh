@@ -11,7 +11,9 @@
 #   DB_CONTAINER=other-db ./scripts/dump.sh
 #
 # Переменные окружения (с дефолтами под docker-compose этого проекта):
-#   DB_CONTAINER  — имя docker-контейнера postgres (по умолчанию ku_grant-db-1)
+#   DB_CONTAINER  — имя docker-контейнера postgres (по умолчанию определяется
+#                   автоматически: docker compose service "db", иначе известные
+#                   имена ku_grant_db / ku_grant-db-1)
 #   DB_USER       — пользователь                  (postgres)
 #   DB_NAME       — имя БД                        (kozybayev_db_backup)
 #   DB_PASSWORD   — пароль                        (postgres)
@@ -19,7 +21,6 @@
 
 set -euo pipefail
 
-DB_CONTAINER="${DB_CONTAINER:-ku_grant-db-1}"
 DB_USER="${DB_USER:-postgres}"
 DB_NAME="${DB_NAME:-kozybayev_db_backup}"
 DB_PASSWORD="${DB_PASSWORD:-postgres}"
@@ -28,9 +29,31 @@ REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TS="$(date +%Y-%m-%d_%H-%M-%S)"
 OUT="$REPO_ROOT/dumps/$TS"
 
-# Проверка что контейнер запущен
-if ! docker ps --format '{{.Names}}' | grep -qx "$DB_CONTAINER"; then
-    echo "[dump] контейнер '$DB_CONTAINER' не запущен. Поднимите его:  docker-compose up -d db" >&2
+# Имя/ID контейнера postgres. Имя зависит от окружения (локально ku_grant-db-1,
+# на сервере с override — ku_grant_db), поэтому определяем автоматически.
+# Явное значение DB_CONTAINER имеет приоритет.
+resolve_db_container() {
+    if [ -n "${DB_CONTAINER:-}" ]; then
+        echo "$DB_CONTAINER"; return
+    fi
+    local cid
+    cid="$(docker compose -f "$REPO_ROOT/docker-compose.yml" ps -q db 2>/dev/null | head -n1)"
+    if [ -n "$cid" ]; then echo "$cid"; return; fi
+    local name
+    for name in ku_grant_db ku_grant-db-1 ku-grant-db-1; do
+        if docker ps --format '{{.Names}}' | grep -qx "$name"; then
+            echo "$name"; return
+        fi
+    done
+    echo ""
+}
+
+DB_CONTAINER="$(resolve_db_container)"
+
+if [ -z "$DB_CONTAINER" ] || \
+   [ "$(docker inspect -f '{{.State.Running}}' "$DB_CONTAINER" 2>/dev/null)" != "true" ]; then
+    echo "[dump] не найден запущенный контейнер postgres." >&2
+    echo "       Проверьте 'docker ps' или укажите вручную:  DB_CONTAINER=<имя> $0" >&2
     exit 1
 fi
 
