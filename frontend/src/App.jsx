@@ -6,6 +6,7 @@ import ResultPanel      from './components/ResultPanel';
 import InfoPanel        from './components/InfoPanel';
 import ChatBot          from './components/ChatBot';
 import LanguageSwitcher from './components/LanguageSwitcher';
+import kuLogo           from '../ku.png';   // импорт → vite бандлит ассет в dist
 import './App.css';
 
 export default function App() {
@@ -43,7 +44,7 @@ export default function App() {
           <div className="lp-navbar-brand-arizona mb-2 mb-md-0">
             <a href="https://ku.edu.kz">
               <img
-                src="./ku.png"
+                src={kuLogo}
                 className="img-fluid ku-icon"
                 alt={t('header.logoAlt')}
               />
