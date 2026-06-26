@@ -1,46 +1,46 @@
 services:
-    db:
-      image: postgres:16
-      container_name: ku_grant_db          # ← было без имени
-      restart: always
-      environment:
-        POSTGRES_USER: postgres
-        POSTGRES_PASSWORD: postgres
-        POSTGRES_DB: kozybayev_db_backup
-      volumes:
-        - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
-        - ku_grant_pgdata:/var/lib/postgresql/data   # ← добавил персистентный том
-      healthcheck:
-        test: ["CMD-SHELL", "pg_isready -U postgres"]
-        interval: 5s
-        timeout: 5s
-        retries: 5
-      networks: [ platforms_net ]           # ← было default
+  db:
+    image: postgres:16
+    container_name: ku_grant_db          # ← было без имени
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: kozybayev_db_backup
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ku_grant_pgdata:/var/lib/postgresql/data   # ← добавил персистентный том
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks: [ platforms_net ]           # ← было default
 
-    backend:
-      build: ./backend
-      container_name: ku_grant_api          # ← имя, по которому проксирует nginx
-      restart: always
-      environment:
-        DATABASE_URL: postgresql://postgres:postgres@ku_grant_db:5432/kozybayev_db_backup  # ← db -> ku_grant_db
-        GROQ_API_KEY: ${GROQ_API_KEY}
-      depends_on:
-        db: { condition: service_healthy }
-      networks: [ platforms_net ]
-      # ports убраны — nginx ходит по сети на внутренний 8000
+  backend:
+    build: ./backend
+    container_name: ku_grant_api          # ← имя, по которому проксирует nginx
+    restart: always
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@ku_grant_db:5432/kozybayev_db_backup  # ← db -> ku_grant_db
+      GROQ_API_KEY: ${GROQ_API_KEY}
+    depends_on:
+      db: { condition: service_healthy }
+    networks: [ platforms_net ]
+    # ports убраны — nginx ходит по сети на внутренний 8000
 
-    frontend:
-      build: ./frontend
-      container_name: ku_grant_front
-      restart: always
-      volumes:
-        - ./frontend:/app
-        - /app/node_modules
-      environment:
-        - NODE_ENV=development
-      depends_on: [ backend ]
-      networks: [ platforms_net ]
-      # ports убраны — внутренний 5173
+  frontend:
+    build: ./frontend
+    container_name: ku_grant_front
+    restart: always
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    depends_on: [ backend ]
+    networks: [ platforms_net ]
+    # ports убраны — внутренний 5173
 
   volumes:
     ku_grant_pgdata:
