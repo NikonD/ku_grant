@@ -33,11 +33,10 @@ services:
     build: ./frontend
     container_name: ku_grant_front
     restart: always
-    volumes:
-      - ./frontend:/app
-      - /app/node_modules
+    # Никаких volume с исходниками: контейнер раздаёт собранную в образе
+    # статику (vite preview). Bind-mount перекрыл бы /app и спрятал dist.
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
     depends_on: [ backend ]
     networks: [ platforms_net ]
     # ports убраны — внутренний 5173
