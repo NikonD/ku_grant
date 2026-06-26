@@ -42,10 +42,10 @@ services:
     networks: [ platforms_net ]
     # ports убраны — внутренний 5173
 
-  volumes:
-    ku_grant_pgdata:
+volumes:
+  ku_grant_pgdata:
 
-  networks:
-    platforms_net:
-      external: true
-      name: platforms_default
+networks:
+  platforms_net:
+    external: true
+    name: platforms_default
