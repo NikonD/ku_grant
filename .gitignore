@@ -67,6 +67,9 @@ lerna-debug.log*
 .DS_Store
 Thumbs.db
 
+# Source data documents (large official PDFs — keep out of git)
+*.pdf
+
 # Docker overrides
 docker-compose.override.yml
 .swarm

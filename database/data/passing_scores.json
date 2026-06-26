@@ -1,178 +1,2452 @@
 [
-  { "specialty_code": "6B01401", "quota": "общий",            "min_score": 121, "applicants": 0, "enrolled": 12 },
-  { "specialty_code": "6B01404", "quota": "общий",            "min_score": 121, "applicants": 0, "enrolled": 12 },
-  { "specialty_code": "6B01405", "quota": "общий",            "min_score": 121, "applicants": 0, "enrolled": 12 },
-  { "specialty_code": "6B01402", "quota": "общий",            "min_score": 117, "applicants": 0, "enrolled": 4  },
-  { "specialty_code": "6B01406", "quota": "общий",            "min_score": 117, "applicants": 0, "enrolled": 4  },
-  { "specialty_code": "6B01516", "quota": "общий",            "min_score": 81,  "applicants": 0, "enrolled": 20 },
-  { "specialty_code": "6B01515", "quota": "общий",            "min_score": 76,  "applicants": 0, "enrolled": 8  },
-  { "specialty_code": "6B01517", "quota": "общий",            "min_score": 75,  "applicants": 0, "enrolled": 5  },
-  { "specialty_code": "6B01519", "quota": "общий",            "min_score": 77,  "applicants": 0, "enrolled": 15 },
-  { "specialty_code": "6B01513", "quota": "общий",            "min_score": 80,  "applicants": 0, "enrolled": 15 },
-  { "specialty_code": "6B01518", "quota": "общий",            "min_score": 83,  "applicants": 0, "enrolled": 15 },
-  { "specialty_code": "6B01602", "quota": "общий",            "min_score": 86,  "applicants": 0, "enrolled": 25 },
-  { "specialty_code": "6B01706", "quota": "общий",            "min_score": 106, "applicants": 0, "enrolled": 20 },
-  { "specialty_code": "6B01705", "quota": "общий",            "min_score": 85,  "applicants": 0, "enrolled": 22 },
-  { "specialty_code": "6B01704", "quota": "общий",            "min_score": 103, "applicants": 0, "enrolled": 20 },
-  { "specialty_code": "6B02101", "quota": "общий",            "min_score": 125, "applicants": 0, "enrolled": 3  },
-  { "specialty_code": "6B04201", "quota": "общий",            "min_score": 90,  "applicants": 0, "enrolled": 4  },
-  { "specialty_code": "6B05202", "quota": "общий",            "min_score": 74,  "applicants": 0, "enrolled": 10 },
-  { "specialty_code": "6B05203", "quota": "общий",            "min_score": 72,  "applicants": 0, "enrolled": 24 },
-  { "specialty_code": "6B06102", "quota": "общий",            "min_score": 65,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B06106", "quota": "общий",            "min_score": 65,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B06111", "quota": "общий",            "min_score": 65,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B06201", "quota": "общий",            "min_score": 71,  "applicants": 0, "enrolled": 3  },
-  { "specialty_code": "6B06203", "quota": "общий",            "min_score": 71,  "applicants": 0, "enrolled": 3  },
-  { "specialty_code": "6B07103", "quota": "общий",            "min_score": 77,  "applicants": 0, "enrolled": 5  },
-  { "specialty_code": "6B07109", "quota": "общий",            "min_score": 102, "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B07106", "quota": "общий",            "min_score": 53,  "applicants": 0, "enrolled": 24 },
-  { "specialty_code": "6B07108", "quota": "общий",            "min_score": 53,  "applicants": 0, "enrolled": 24 },
-  { "specialty_code": "6B07105", "quota": "общий",            "min_score": 59,  "applicants": 0, "enrolled": 14 },
-  { "specialty_code": "6B07107", "quota": "общий",            "min_score": 59,  "applicants": 0, "enrolled": 14 },
-  { "specialty_code": "6B07201", "quota": "общий",            "min_score": 64,  "applicants": 0, "enrolled": 10 },
-  { "specialty_code": "6B07301", "quota": "общий",            "min_score": 72,  "applicants": 0, "enrolled": 7  },
-  { "specialty_code": "6B07302", "quota": "общий",            "min_score": 72,  "applicants": 0, "enrolled": 7  },
-  { "specialty_code": "6B07504", "quota": "общий",            "min_score": 74,  "applicants": 0, "enrolled": 2  },
-  { "specialty_code": "6B08101", "quota": "общий",            "min_score": 58,  "applicants": 0, "enrolled": 23 },
-  { "specialty_code": "6B08104", "quota": "общий",            "min_score": 58,  "applicants": 0, "enrolled": 23 },
-  { "specialty_code": "6B08201", "quota": "общий",            "min_score": 56,  "applicants": 0, "enrolled": 25 },
-  { "specialty_code": "6B08301", "quota": "общий",            "min_score": 63,  "applicants": 0, "enrolled": 15 },
-  { "specialty_code": "6B11101", "quota": "общий",            "min_score": 122, "applicants": 0, "enrolled": 1  },
-
-  { "specialty_code": "6B01401", "quota": "сельская",         "min_score": 121, "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01404", "quota": "сельская",         "min_score": 121, "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01405", "quota": "сельская",         "min_score": 121, "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01705", "quota": "сельская",         "min_score": 75,  "applicants": 0, "enrolled": 8  },
-  { "specialty_code": "6B01906", "quota": "сельская",         "min_score": 81,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01907", "quota": "сельская",         "min_score": 81,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01908", "quota": "сельская",         "min_score": 81,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01911", "quota": "сельская",         "min_score": 81,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B03201", "quota": "сельская",         "min_score": 123, "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B05202", "quota": "сельская",         "min_score": 69,  "applicants": 0, "enrolled": 5  },
-  { "specialty_code": "6B06102", "quota": "сельская",         "min_score": 66,  "applicants": 0, "enrolled": 18 },
-  { "specialty_code": "6B06106", "quota": "сельская",         "min_score": 66,  "applicants": 0, "enrolled": 18 },
-  { "specialty_code": "6B06111", "quota": "сельская",         "min_score": 66,  "applicants": 0, "enrolled": 18 },
-  { "specialty_code": "6B06201", "quota": "сельская",         "min_score": 59,  "applicants": 0, "enrolled": 8  },
-  { "specialty_code": "6B06203", "quota": "сельская",         "min_score": 59,  "applicants": 0, "enrolled": 8  },
-  { "specialty_code": "6B07103", "quota": "сельская",         "min_score": 65,  "applicants": 0, "enrolled": 5  },
-  { "specialty_code": "6B07105", "quota": "сельская",         "min_score": 52,  "applicants": 0, "enrolled": 4  },
-  { "specialty_code": "6B07107", "quota": "сельская",         "min_score": 52,  "applicants": 0, "enrolled": 4  },
-  { "specialty_code": "6B07201", "quota": "сельская",         "min_score": 68,  "applicants": 0, "enrolled": 3  },
-  { "specialty_code": "6B08101", "quota": "сельская",         "min_score": 62,  "applicants": 0, "enrolled": 5  },
-  { "specialty_code": "6B08104", "quota": "сельская",         "min_score": 62,  "applicants": 0, "enrolled": 5  },
-  { "specialty_code": "6B08201", "quota": "сельская",         "min_score": 52,  "applicants": 0, "enrolled": 7  },
-  { "specialty_code": "6B08301", "quota": "сельская",         "min_score": 68,  "applicants": 0, "enrolled": 9  },
-
-  { "specialty_code": "6B01516", "quota": "rural_move",       "min_score": 77,  "applicants": 0, "enrolled": 4  },
-  { "specialty_code": "6B01519", "quota": "rural_move",       "min_score": 76,  "applicants": 0, "enrolled": 2  },
-  { "specialty_code": "6B01513", "quota": "rural_move",       "min_score": 75,  "applicants": 0, "enrolled": 6  },
-  { "specialty_code": "6B01518", "quota": "rural_move",       "min_score": 78,  "applicants": 0, "enrolled": 2  },
-  { "specialty_code": "6B01602", "quota": "rural_move",       "min_score": 75,  "applicants": 0, "enrolled": 6  },
-  { "specialty_code": "6B01706", "quota": "rural_move",       "min_score": 93,  "applicants": 0, "enrolled": 11 },
-  { "specialty_code": "6B01704", "quota": "rural_move",       "min_score": 93,  "applicants": 0, "enrolled": 7  },
-  { "specialty_code": "6B01906", "quota": "rural_move",       "min_score": 76,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01907", "quota": "rural_move",       "min_score": 76,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01908", "quota": "rural_move",       "min_score": 76,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01911", "quota": "rural_move",       "min_score": 76,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B07103", "quota": "rural_move",       "min_score": 56,  "applicants": 0, "enrolled": 2  },
-  { "specialty_code": "6B07109", "quota": "rural_move",       "min_score": 51,  "applicants": 0, "enrolled": 2  },
-  { "specialty_code": "6B08101", "quota": "rural_move",       "min_score": 52,  "applicants": 0, "enrolled": 8  },
-  { "specialty_code": "6B08104", "quota": "rural_move",       "min_score": 52,  "applicants": 0, "enrolled": 8  },
-  { "specialty_code": "6B08301", "quota": "rural_move",       "min_score": 52,  "applicants": 0, "enrolled": 25 },
-
-  { "specialty_code": "6B01101", "quota": "orphan",           "min_score": 75,  "applicants": 0, "enrolled": 4  },
-  { "specialty_code": "6B01103", "quota": "orphan",           "min_score": 75,  "applicants": 0, "enrolled": 4  },
-  { "specialty_code": "6B01111", "quota": "orphan",           "min_score": 75,  "applicants": 0, "enrolled": 4  },
-  { "specialty_code": "6B01401", "quota": "orphan",           "min_score": 118, "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01404", "quota": "orphan",           "min_score": 118, "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01405", "quota": "orphan",           "min_score": 118, "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01513", "quota": "orphan",           "min_score": 78,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B02302", "quota": "orphan",           "min_score": 55,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B02303", "quota": "orphan",           "min_score": 55,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B05308", "quota": "orphan",           "min_score": 54,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B06102", "quota": "orphan",           "min_score": 73,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B06106", "quota": "orphan",           "min_score": 73,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B06111", "quota": "orphan",           "min_score": 73,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B08101", "quota": "orphan",           "min_score": 58,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B08104", "quota": "orphan",           "min_score": 58,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B11102", "quota": "orphan",           "min_score": 52,  "applicants": 0, "enrolled": 1  },
-
-  { "specialty_code": "6B01401", "quota": "disability_self",  "min_score": 112, "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01404", "quota": "disability_self",  "min_score": 112, "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01405", "quota": "disability_self",  "min_score": 112, "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B02101", "quota": "disability_self",  "min_score": 82,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B03201", "quota": "disability_self",  "min_score": 119, "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B05202", "quota": "disability_self",  "min_score": 65,  "applicants": 0, "enrolled": 2  },
-  { "specialty_code": "6B06102", "quota": "disability_self",  "min_score": 59,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B06106", "quota": "disability_self",  "min_score": 59,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B06111", "quota": "disability_self",  "min_score": 59,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B08201", "quota": "disability_self",  "min_score": 50,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B11101", "quota": "disability_self",  "min_score": 113, "applicants": 0, "enrolled": 1  },
-
-  { "specialty_code": "6B01101", "quota": "large_family",     "min_score": 75,  "applicants": 0, "enrolled": 3  },
-  { "specialty_code": "6B01103", "quota": "large_family",     "min_score": 75,  "applicants": 0, "enrolled": 3  },
-  { "specialty_code": "6B01111", "quota": "large_family",     "min_score": 75,  "applicants": 0, "enrolled": 3  },
-  { "specialty_code": "6B01301", "quota": "large_family",     "min_score": 77,  "applicants": 0, "enrolled": 2  },
-  { "specialty_code": "6B01302", "quota": "large_family",     "min_score": 77,  "applicants": 0, "enrolled": 2  },
-  { "specialty_code": "6B01303", "quota": "large_family",     "min_score": 77,  "applicants": 0, "enrolled": 2  },
-  { "specialty_code": "6B01311", "quota": "large_family",     "min_score": 77,  "applicants": 0, "enrolled": 2  },
-  { "specialty_code": "6B01401", "quota": "large_family",     "min_score": 120, "applicants": 0, "enrolled": 2  },
-  { "specialty_code": "6B01404", "quota": "large_family",     "min_score": 120, "applicants": 0, "enrolled": 2  },
-  { "specialty_code": "6B01405", "quota": "large_family",     "min_score": 120, "applicants": 0, "enrolled": 2  },
-  { "specialty_code": "6B03201", "quota": "large_family",     "min_score": 121, "applicants": 0, "enrolled": 3  },
-  { "specialty_code": "6B04104", "quota": "large_family",     "min_score": 64,  "applicants": 0, "enrolled": 10 },
-  { "specialty_code": "6B04108", "quota": "large_family",     "min_score": 64,  "applicants": 0, "enrolled": 10 },
-  { "specialty_code": "6B04111", "quota": "large_family",     "min_score": 64,  "applicants": 0, "enrolled": 10 },
-  { "specialty_code": "6B05103", "quota": "large_family",     "min_score": 58,  "applicants": 0, "enrolled": 8  },
-  { "specialty_code": "6B05111", "quota": "large_family",     "min_score": 58,  "applicants": 0, "enrolled": 8  },
-  { "specialty_code": "6B05307", "quota": "large_family",     "min_score": 64,  "applicants": 0, "enrolled": 3  },
-  { "specialty_code": "6B05308", "quota": "large_family",     "min_score": 61,  "applicants": 0, "enrolled": 2  },
-  { "specialty_code": "6B06102", "quota": "large_family",     "min_score": 58,  "applicants": 0, "enrolled": 19 },
-  { "specialty_code": "6B06106", "quota": "large_family",     "min_score": 58,  "applicants": 0, "enrolled": 19 },
-  { "specialty_code": "6B06111", "quota": "large_family",     "min_score": 58,  "applicants": 0, "enrolled": 19 },
-  { "specialty_code": "6B06201", "quota": "large_family",     "min_score": 63,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B06203", "quota": "large_family",     "min_score": 63,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B08301", "quota": "large_family",     "min_score": 64,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B11101", "quota": "large_family",     "min_score": 114, "applicants": 0, "enrolled": 1  },
-
-  { "specialty_code": "6B01101", "quota": "single_parent",    "min_score": 79,  "applicants": 0, "enrolled": 3  },
-  { "specialty_code": "6B01103", "quota": "single_parent",    "min_score": 79,  "applicants": 0, "enrolled": 3  },
-  { "specialty_code": "6B01111", "quota": "single_parent",    "min_score": 79,  "applicants": 0, "enrolled": 3  },
-  { "specialty_code": "6B01401", "quota": "single_parent",    "min_score": 116, "applicants": 0, "enrolled": 6  },
-  { "specialty_code": "6B01404", "quota": "single_parent",    "min_score": 116, "applicants": 0, "enrolled": 6  },
-  { "specialty_code": "6B01405", "quota": "single_parent",    "min_score": 116, "applicants": 0, "enrolled": 6  },
-  { "specialty_code": "6B03201", "quota": "single_parent",    "min_score": 121, "applicants": 0, "enrolled": 3  },
-  { "specialty_code": "6B04104", "quota": "single_parent",    "min_score": 70,  "applicants": 0, "enrolled": 7  },
-  { "specialty_code": "6B04108", "quota": "single_parent",    "min_score": 70,  "applicants": 0, "enrolled": 7  },
-  { "specialty_code": "6B04111", "quota": "single_parent",    "min_score": 70,  "applicants": 0, "enrolled": 7  },
-  { "specialty_code": "6B05103", "quota": "single_parent",    "min_score": 53,  "applicants": 0, "enrolled": 5  },
-  { "specialty_code": "6B05111", "quota": "single_parent",    "min_score": 53,  "applicants": 0, "enrolled": 5  },
-  { "specialty_code": "6B05202", "quota": "single_parent",    "min_score": 69,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B05307", "quota": "single_parent",    "min_score": 71,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B05308", "quota": "single_parent",    "min_score": 60,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B06102", "quota": "single_parent",    "min_score": 57,  "applicants": 0, "enrolled": 11 },
-  { "specialty_code": "6B06106", "quota": "single_parent",    "min_score": 57,  "applicants": 0, "enrolled": 11 },
-  { "specialty_code": "6B06111", "quota": "single_parent",    "min_score": 57,  "applicants": 0, "enrolled": 11 },
-  { "specialty_code": "6B07201", "quota": "single_parent",    "min_score": 63,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B07504", "quota": "single_parent",    "min_score": 65,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B08101", "quota": "single_parent",    "min_score": 60,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B08104", "quota": "single_parent",    "min_score": 60,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B08301", "quota": "single_parent",    "min_score": 61,  "applicants": 0, "enrolled": 6  },
-
-  { "specialty_code": "6B01401", "quota": "disability_family","min_score": 116, "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01404", "quota": "disability_family","min_score": 116, "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B01405", "quota": "disability_family","min_score": 116, "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B03201", "quota": "disability_family","min_score": 116, "applicants": 0, "enrolled": 2  },
-  { "specialty_code": "6B04104", "quota": "disability_family","min_score": 70,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B04108", "quota": "disability_family","min_score": 70,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B04111", "quota": "disability_family","min_score": 70,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B05203", "quota": "disability_family","min_score": 56,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B06102", "quota": "disability_family","min_score": 67,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B06106", "quota": "disability_family","min_score": 67,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B06111", "quota": "disability_family","min_score": 67,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B06201", "quota": "disability_family","min_score": 52,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B06203", "quota": "disability_family","min_score": 52,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B07301", "quota": "disability_family","min_score": 61,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B07302", "quota": "disability_family","min_score": 61,  "applicants": 0, "enrolled": 1  },
-  { "specialty_code": "6B08301", "quota": "disability_family","min_score": 55,  "applicants": 0, "enrolled": 2  }
+  {
+    "specialty_code": "6B01101",
+    "quota": "общий",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 178
+  },
+  {
+    "specialty_code": "6B01101",
+    "quota": "сельская",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 88
+  },
+  {
+    "specialty_code": "6B01101",
+    "quota": "rural_move",
+    "min_score": 76,
+    "applicants": 0,
+    "enrolled": 4
+  },
+  {
+    "specialty_code": "6B01101",
+    "quota": "orphan",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 4
+  },
+  {
+    "specialty_code": "6B01101",
+    "quota": "disability_self",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 5
+  },
+  {
+    "specialty_code": "6B01103",
+    "quota": "общий",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 178
+  },
+  {
+    "specialty_code": "6B01103",
+    "quota": "сельская",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 88
+  },
+  {
+    "specialty_code": "6B01103",
+    "quota": "rural_move",
+    "min_score": 76,
+    "applicants": 0,
+    "enrolled": 4
+  },
+  {
+    "specialty_code": "6B01103",
+    "quota": "orphan",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 4
+  },
+  {
+    "specialty_code": "6B01103",
+    "quota": "disability_self",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 5
+  },
+  {
+    "specialty_code": "6B01111",
+    "quota": "общий",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 178
+  },
+  {
+    "specialty_code": "6B01111",
+    "quota": "сельская",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 88
+  },
+  {
+    "specialty_code": "6B01111",
+    "quota": "rural_move",
+    "min_score": 76,
+    "applicants": 0,
+    "enrolled": 4
+  },
+  {
+    "specialty_code": "6B01111",
+    "quota": "orphan",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 4
+  },
+  {
+    "specialty_code": "6B01111",
+    "quota": "disability_self",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 5
+  },
+  {
+    "specialty_code": "6B01301",
+    "quota": "общий",
+    "min_score": 76,
+    "applicants": 0,
+    "enrolled": 463
+  },
+  {
+    "specialty_code": "6B01301",
+    "quota": "сельская",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 248
+  },
+  {
+    "specialty_code": "6B01301",
+    "quota": "rural_move",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 18
+  },
+  {
+    "specialty_code": "6B01301",
+    "quota": "orphan",
+    "min_score": 81,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B01301",
+    "quota": "disability_self",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B01302",
+    "quota": "общий",
+    "min_score": 76,
+    "applicants": 0,
+    "enrolled": 463
+  },
+  {
+    "specialty_code": "6B01302",
+    "quota": "сельская",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 248
+  },
+  {
+    "specialty_code": "6B01302",
+    "quota": "rural_move",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 18
+  },
+  {
+    "specialty_code": "6B01302",
+    "quota": "orphan",
+    "min_score": 81,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B01302",
+    "quota": "disability_self",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B01303",
+    "quota": "общий",
+    "min_score": 76,
+    "applicants": 0,
+    "enrolled": 463
+  },
+  {
+    "specialty_code": "6B01303",
+    "quota": "сельская",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 248
+  },
+  {
+    "specialty_code": "6B01303",
+    "quota": "rural_move",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 18
+  },
+  {
+    "specialty_code": "6B01303",
+    "quota": "orphan",
+    "min_score": 81,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B01303",
+    "quota": "disability_self",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B01311",
+    "quota": "общий",
+    "min_score": 76,
+    "applicants": 0,
+    "enrolled": 463
+  },
+  {
+    "specialty_code": "6B01311",
+    "quota": "сельская",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 248
+  },
+  {
+    "specialty_code": "6B01311",
+    "quota": "rural_move",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 18
+  },
+  {
+    "specialty_code": "6B01311",
+    "quota": "orphan",
+    "min_score": 81,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B01311",
+    "quota": "disability_self",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B01401",
+    "quota": "общий",
+    "min_score": 121,
+    "applicants": 0,
+    "enrolled": 564
+  },
+  {
+    "specialty_code": "6B01401",
+    "quota": "сельская",
+    "min_score": 117,
+    "applicants": 0,
+    "enrolled": 407
+  },
+  {
+    "specialty_code": "6B01401",
+    "quota": "large_family",
+    "min_score": 118,
+    "applicants": 0,
+    "enrolled": 470
+  },
+  {
+    "specialty_code": "6B01401",
+    "quota": "single_parent",
+    "min_score": 115,
+    "applicants": 0,
+    "enrolled": 269
+  },
+  {
+    "specialty_code": "6B01401",
+    "quota": "rural_move",
+    "min_score": 105,
+    "applicants": 0,
+    "enrolled": 45
+  },
+  {
+    "specialty_code": "6B01401",
+    "quota": "orphan",
+    "min_score": 81,
+    "applicants": 0,
+    "enrolled": 54
+  },
+  {
+    "specialty_code": "6B01401",
+    "quota": "disability_family",
+    "min_score": 92,
+    "applicants": 0,
+    "enrolled": 92
+  },
+  {
+    "specialty_code": "6B01401",
+    "quota": "disability_self",
+    "min_score": 85,
+    "applicants": 0,
+    "enrolled": 54
+  },
+  {
+    "specialty_code": "6B01404",
+    "quota": "общий",
+    "min_score": 121,
+    "applicants": 0,
+    "enrolled": 564
+  },
+  {
+    "specialty_code": "6B01404",
+    "quota": "сельская",
+    "min_score": 117,
+    "applicants": 0,
+    "enrolled": 407
+  },
+  {
+    "specialty_code": "6B01404",
+    "quota": "large_family",
+    "min_score": 118,
+    "applicants": 0,
+    "enrolled": 470
+  },
+  {
+    "specialty_code": "6B01404",
+    "quota": "single_parent",
+    "min_score": 115,
+    "applicants": 0,
+    "enrolled": 269
+  },
+  {
+    "specialty_code": "6B01404",
+    "quota": "rural_move",
+    "min_score": 105,
+    "applicants": 0,
+    "enrolled": 45
+  },
+  {
+    "specialty_code": "6B01404",
+    "quota": "orphan",
+    "min_score": 81,
+    "applicants": 0,
+    "enrolled": 54
+  },
+  {
+    "specialty_code": "6B01404",
+    "quota": "disability_family",
+    "min_score": 92,
+    "applicants": 0,
+    "enrolled": 92
+  },
+  {
+    "specialty_code": "6B01404",
+    "quota": "disability_self",
+    "min_score": 85,
+    "applicants": 0,
+    "enrolled": 54
+  },
+  {
+    "specialty_code": "6B01405",
+    "quota": "общий",
+    "min_score": 121,
+    "applicants": 0,
+    "enrolled": 564
+  },
+  {
+    "specialty_code": "6B01405",
+    "quota": "сельская",
+    "min_score": 117,
+    "applicants": 0,
+    "enrolled": 407
+  },
+  {
+    "specialty_code": "6B01405",
+    "quota": "large_family",
+    "min_score": 118,
+    "applicants": 0,
+    "enrolled": 470
+  },
+  {
+    "specialty_code": "6B01405",
+    "quota": "single_parent",
+    "min_score": 115,
+    "applicants": 0,
+    "enrolled": 269
+  },
+  {
+    "specialty_code": "6B01405",
+    "quota": "rural_move",
+    "min_score": 105,
+    "applicants": 0,
+    "enrolled": 45
+  },
+  {
+    "specialty_code": "6B01405",
+    "quota": "orphan",
+    "min_score": 81,
+    "applicants": 0,
+    "enrolled": 54
+  },
+  {
+    "specialty_code": "6B01405",
+    "quota": "disability_family",
+    "min_score": 92,
+    "applicants": 0,
+    "enrolled": 92
+  },
+  {
+    "specialty_code": "6B01405",
+    "quota": "disability_self",
+    "min_score": 85,
+    "applicants": 0,
+    "enrolled": 54
+  },
+  {
+    "specialty_code": "6B01402",
+    "quota": "общий",
+    "min_score": 117,
+    "applicants": 0,
+    "enrolled": 103
+  },
+  {
+    "specialty_code": "6B01402",
+    "quota": "сельская",
+    "min_score": 100,
+    "applicants": 0,
+    "enrolled": 49
+  },
+  {
+    "specialty_code": "6B01402",
+    "quota": "large_family",
+    "min_score": 118,
+    "applicants": 0,
+    "enrolled": 35
+  },
+  {
+    "specialty_code": "6B01402",
+    "quota": "single_parent",
+    "min_score": 115,
+    "applicants": 0,
+    "enrolled": 26
+  },
+  {
+    "specialty_code": "6B01402",
+    "quota": "rural_move",
+    "min_score": 91,
+    "applicants": 0,
+    "enrolled": 18
+  },
+  {
+    "specialty_code": "6B01402",
+    "quota": "orphan",
+    "min_score": 108,
+    "applicants": 0,
+    "enrolled": 4
+  },
+  {
+    "specialty_code": "6B01402",
+    "quota": "disability_family",
+    "min_score": 108,
+    "applicants": 0,
+    "enrolled": 5
+  },
+  {
+    "specialty_code": "6B01402",
+    "quota": "disability_self",
+    "min_score": 103,
+    "applicants": 0,
+    "enrolled": 10
+  },
+  {
+    "specialty_code": "6B01406",
+    "quota": "общий",
+    "min_score": 117,
+    "applicants": 0,
+    "enrolled": 103
+  },
+  {
+    "specialty_code": "6B01406",
+    "quota": "сельская",
+    "min_score": 100,
+    "applicants": 0,
+    "enrolled": 49
+  },
+  {
+    "specialty_code": "6B01406",
+    "quota": "large_family",
+    "min_score": 118,
+    "applicants": 0,
+    "enrolled": 35
+  },
+  {
+    "specialty_code": "6B01406",
+    "quota": "single_parent",
+    "min_score": 115,
+    "applicants": 0,
+    "enrolled": 26
+  },
+  {
+    "specialty_code": "6B01406",
+    "quota": "rural_move",
+    "min_score": 91,
+    "applicants": 0,
+    "enrolled": 18
+  },
+  {
+    "specialty_code": "6B01406",
+    "quota": "orphan",
+    "min_score": 108,
+    "applicants": 0,
+    "enrolled": 4
+  },
+  {
+    "specialty_code": "6B01406",
+    "quota": "disability_family",
+    "min_score": 108,
+    "applicants": 0,
+    "enrolled": 5
+  },
+  {
+    "specialty_code": "6B01406",
+    "quota": "disability_self",
+    "min_score": 103,
+    "applicants": 0,
+    "enrolled": 10
+  },
+  {
+    "specialty_code": "6B01516",
+    "quota": "общий",
+    "min_score": 80,
+    "applicants": 0,
+    "enrolled": 674
+  },
+  {
+    "specialty_code": "6B01516",
+    "quota": "сельская",
+    "min_score": 76,
+    "applicants": 0,
+    "enrolled": 363
+  },
+  {
+    "specialty_code": "6B01516",
+    "quota": "rural_move",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 39
+  },
+  {
+    "specialty_code": "6B01516",
+    "quota": "orphan",
+    "min_score": 76,
+    "applicants": 0,
+    "enrolled": 5
+  },
+  {
+    "specialty_code": "6B01516",
+    "quota": "disability_family",
+    "min_score": 100,
+    "applicants": 0,
+    "enrolled": 4
+  },
+  {
+    "specialty_code": "6B01516",
+    "quota": "disability_self",
+    "min_score": 89,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B01515",
+    "quota": "общий",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 292
+  },
+  {
+    "specialty_code": "6B01515",
+    "quota": "сельская",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 152
+  },
+  {
+    "specialty_code": "6B01515",
+    "quota": "rural_move",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 9
+  },
+  {
+    "specialty_code": "6B01515",
+    "quota": "orphan",
+    "min_score": 82,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B01517",
+    "quota": "общий",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 517
+  },
+  {
+    "specialty_code": "6B01517",
+    "quota": "сельская",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 30
+  },
+  {
+    "specialty_code": "6B01519",
+    "quota": "общий",
+    "min_score": 80,
+    "applicants": 0,
+    "enrolled": 353
+  },
+  {
+    "specialty_code": "6B01519",
+    "quota": "сельская",
+    "min_score": 77,
+    "applicants": 0,
+    "enrolled": 190
+  },
+  {
+    "specialty_code": "6B01519",
+    "quota": "rural_move",
+    "min_score": 76,
+    "applicants": 0,
+    "enrolled": 24
+  },
+  {
+    "specialty_code": "6B01519",
+    "quota": "orphan",
+    "min_score": 79,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B01519",
+    "quota": "disability_family",
+    "min_score": 99,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B01519",
+    "quota": "disability_self",
+    "min_score": 78,
+    "applicants": 0,
+    "enrolled": 4
+  },
+  {
+    "specialty_code": "6B01513",
+    "quota": "общий",
+    "min_score": 83,
+    "applicants": 0,
+    "enrolled": 355
+  },
+  {
+    "specialty_code": "6B01513",
+    "quota": "сельская",
+    "min_score": 78,
+    "applicants": 0,
+    "enrolled": 188
+  },
+  {
+    "specialty_code": "6B01513",
+    "quota": "rural_move",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 63
+  },
+  {
+    "specialty_code": "6B01513",
+    "quota": "orphan",
+    "min_score": 76,
+    "applicants": 0,
+    "enrolled": 4
+  },
+  {
+    "specialty_code": "6B01513",
+    "quota": "disability_self",
+    "min_score": 76,
+    "applicants": 0,
+    "enrolled": 6
+  },
+  {
+    "specialty_code": "6B01518",
+    "quota": "общий",
+    "min_score": 87,
+    "applicants": 0,
+    "enrolled": 282
+  },
+  {
+    "specialty_code": "6B01518",
+    "quota": "сельская",
+    "min_score": 83,
+    "applicants": 0,
+    "enrolled": 162
+  },
+  {
+    "specialty_code": "6B01518",
+    "quota": "rural_move",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 31
+  },
+  {
+    "specialty_code": "6B01518",
+    "quota": "orphan",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B01602",
+    "quota": "общий",
+    "min_score": 89,
+    "applicants": 0,
+    "enrolled": 285
+  },
+  {
+    "specialty_code": "6B01602",
+    "quota": "сельская",
+    "min_score": 85,
+    "applicants": 0,
+    "enrolled": 159
+  },
+  {
+    "specialty_code": "6B01602",
+    "quota": "rural_move",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 70
+  },
+  {
+    "specialty_code": "6B01602",
+    "quota": "orphan",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 11
+  },
+  {
+    "specialty_code": "6B01602",
+    "quota": "disability_family",
+    "min_score": 102,
+    "applicants": 0,
+    "enrolled": 3
+  },
+  {
+    "specialty_code": "6B01602",
+    "quota": "disability_self",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 8
+  },
+  {
+    "specialty_code": "6B01706",
+    "quota": "общий",
+    "min_score": 108,
+    "applicants": 0,
+    "enrolled": 515
+  },
+  {
+    "specialty_code": "6B01706",
+    "quota": "сельская",
+    "min_score": 103,
+    "applicants": 0,
+    "enrolled": 275
+  },
+  {
+    "specialty_code": "6B01706",
+    "quota": "rural_move",
+    "min_score": 77,
+    "applicants": 0,
+    "enrolled": 261
+  },
+  {
+    "specialty_code": "6B01706",
+    "quota": "orphan",
+    "min_score": 76,
+    "applicants": 0,
+    "enrolled": 8
+  },
+  {
+    "specialty_code": "6B01706",
+    "quota": "disability_family",
+    "min_score": 99,
+    "applicants": 0,
+    "enrolled": 30
+  },
+  {
+    "specialty_code": "6B01706",
+    "quota": "disability_self",
+    "min_score": 79,
+    "applicants": 0,
+    "enrolled": 9
+  },
+  {
+    "specialty_code": "6B01705",
+    "quota": "общий",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 515
+  },
+  {
+    "specialty_code": "6B01705",
+    "quota": "сельская",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 226
+  },
+  {
+    "specialty_code": "6B01705",
+    "quota": "orphan",
+    "min_score": 79,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B01705",
+    "quota": "disability_self",
+    "min_score": 83,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B01704",
+    "quota": "общий",
+    "min_score": 111,
+    "applicants": 0,
+    "enrolled": 462
+  },
+  {
+    "specialty_code": "6B01704",
+    "quota": "сельская",
+    "min_score": 103,
+    "applicants": 0,
+    "enrolled": 247
+  },
+  {
+    "specialty_code": "6B01704",
+    "quota": "single_parent",
+    "min_score": 124,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B01704",
+    "quota": "rural_move",
+    "min_score": 87,
+    "applicants": 0,
+    "enrolled": 359
+  },
+  {
+    "specialty_code": "6B01704",
+    "quota": "orphan",
+    "min_score": 81,
+    "applicants": 0,
+    "enrolled": 15
+  },
+  {
+    "specialty_code": "6B01704",
+    "quota": "disability_family",
+    "min_score": 99,
+    "applicants": 0,
+    "enrolled": 71
+  },
+  {
+    "specialty_code": "6B01704",
+    "quota": "disability_self",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 30
+  },
+  {
+    "specialty_code": "6B01906",
+    "quota": "общий",
+    "min_score": 82,
+    "applicants": 0,
+    "enrolled": 367
+  },
+  {
+    "specialty_code": "6B01906",
+    "quota": "сельская",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 193
+  },
+  {
+    "specialty_code": "6B01906",
+    "quota": "rural_move",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 15
+  },
+  {
+    "specialty_code": "6B01906",
+    "quota": "orphan",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B01907",
+    "quota": "общий",
+    "min_score": 82,
+    "applicants": 0,
+    "enrolled": 367
+  },
+  {
+    "specialty_code": "6B01907",
+    "quota": "сельская",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 193
+  },
+  {
+    "specialty_code": "6B01907",
+    "quota": "rural_move",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 15
+  },
+  {
+    "specialty_code": "6B01907",
+    "quota": "orphan",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B01908",
+    "quota": "общий",
+    "min_score": 82,
+    "applicants": 0,
+    "enrolled": 367
+  },
+  {
+    "specialty_code": "6B01908",
+    "quota": "сельская",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 193
+  },
+  {
+    "specialty_code": "6B01908",
+    "quota": "rural_move",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 15
+  },
+  {
+    "specialty_code": "6B01908",
+    "quota": "orphan",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B01911",
+    "quota": "общий",
+    "min_score": 82,
+    "applicants": 0,
+    "enrolled": 367
+  },
+  {
+    "specialty_code": "6B01911",
+    "quota": "сельская",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 193
+  },
+  {
+    "specialty_code": "6B01911",
+    "quota": "rural_move",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 15
+  },
+  {
+    "specialty_code": "6B01911",
+    "quota": "orphan",
+    "min_score": 75,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B02101",
+    "quota": "общий",
+    "min_score": 124,
+    "applicants": 0,
+    "enrolled": 166
+  },
+  {
+    "specialty_code": "6B02101",
+    "quota": "large_family",
+    "min_score": 121,
+    "applicants": 0,
+    "enrolled": 49
+  },
+  {
+    "specialty_code": "6B02101",
+    "quota": "single_parent",
+    "min_score": 121,
+    "applicants": 0,
+    "enrolled": 30
+  },
+  {
+    "specialty_code": "6B02101",
+    "quota": "orphan",
+    "min_score": 73,
+    "applicants": 0,
+    "enrolled": 11
+  },
+  {
+    "specialty_code": "6B02101",
+    "quota": "disability_family",
+    "min_score": 109,
+    "applicants": 0,
+    "enrolled": 15
+  },
+  {
+    "specialty_code": "6B02101",
+    "quota": "disability_self",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 18
+  },
+  {
+    "specialty_code": "6B02302",
+    "quota": "общий",
+    "min_score": 126,
+    "applicants": 0,
+    "enrolled": 154
+  },
+  {
+    "specialty_code": "6B02302",
+    "quota": "orphan",
+    "min_score": 36,
+    "applicants": 0,
+    "enrolled": 16
+  },
+  {
+    "specialty_code": "6B02302",
+    "quota": "disability_family",
+    "min_score": 120,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B02302",
+    "quota": "disability_self",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 25
+  },
+  {
+    "specialty_code": "6B02303",
+    "quota": "общий",
+    "min_score": 126,
+    "applicants": 0,
+    "enrolled": 154
+  },
+  {
+    "specialty_code": "6B02303",
+    "quota": "orphan",
+    "min_score": 36,
+    "applicants": 0,
+    "enrolled": 16
+  },
+  {
+    "specialty_code": "6B02303",
+    "quota": "disability_family",
+    "min_score": 120,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B02303",
+    "quota": "disability_self",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 25
+  },
+  {
+    "specialty_code": "6B03201",
+    "quota": "общий",
+    "min_score": 126,
+    "applicants": 0,
+    "enrolled": 159
+  },
+  {
+    "specialty_code": "6B03201",
+    "quota": "сельская",
+    "min_score": 122,
+    "applicants": 0,
+    "enrolled": 87
+  },
+  {
+    "specialty_code": "6B03201",
+    "quota": "large_family",
+    "min_score": 120,
+    "applicants": 0,
+    "enrolled": 74
+  },
+  {
+    "specialty_code": "6B03201",
+    "quota": "single_parent",
+    "min_score": 120,
+    "applicants": 0,
+    "enrolled": 45
+  },
+  {
+    "specialty_code": "6B03201",
+    "quota": "orphan",
+    "min_score": 96,
+    "applicants": 0,
+    "enrolled": 21
+  },
+  {
+    "specialty_code": "6B03201",
+    "quota": "disability_family",
+    "min_score": 108,
+    "applicants": 0,
+    "enrolled": 23
+  },
+  {
+    "specialty_code": "6B03201",
+    "quota": "disability_self",
+    "min_score": 68,
+    "applicants": 0,
+    "enrolled": 12
+  },
+  {
+    "specialty_code": "6B04104",
+    "quota": "общий",
+    "min_score": 117,
+    "applicants": 0,
+    "enrolled": 352
+  },
+  {
+    "specialty_code": "6B04104",
+    "quota": "large_family",
+    "min_score": 114,
+    "applicants": 0,
+    "enrolled": 25
+  },
+  {
+    "specialty_code": "6B04104",
+    "quota": "single_parent",
+    "min_score": 113,
+    "applicants": 0,
+    "enrolled": 13
+  },
+  {
+    "specialty_code": "6B04104",
+    "quota": "orphan",
+    "min_score": 64,
+    "applicants": 0,
+    "enrolled": 13
+  },
+  {
+    "specialty_code": "6B04104",
+    "quota": "disability_family",
+    "min_score": 102,
+    "applicants": 0,
+    "enrolled": 8
+  },
+  {
+    "specialty_code": "6B04104",
+    "quota": "disability_self",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 7
+  },
+  {
+    "specialty_code": "6B04108",
+    "quota": "общий",
+    "min_score": 117,
+    "applicants": 0,
+    "enrolled": 352
+  },
+  {
+    "specialty_code": "6B04108",
+    "quota": "large_family",
+    "min_score": 114,
+    "applicants": 0,
+    "enrolled": 25
+  },
+  {
+    "specialty_code": "6B04108",
+    "quota": "single_parent",
+    "min_score": 113,
+    "applicants": 0,
+    "enrolled": 13
+  },
+  {
+    "specialty_code": "6B04108",
+    "quota": "orphan",
+    "min_score": 64,
+    "applicants": 0,
+    "enrolled": 13
+  },
+  {
+    "specialty_code": "6B04108",
+    "quota": "disability_family",
+    "min_score": 102,
+    "applicants": 0,
+    "enrolled": 8
+  },
+  {
+    "specialty_code": "6B04108",
+    "quota": "disability_self",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 7
+  },
+  {
+    "specialty_code": "6B04111",
+    "quota": "общий",
+    "min_score": 117,
+    "applicants": 0,
+    "enrolled": 352
+  },
+  {
+    "specialty_code": "6B04111",
+    "quota": "large_family",
+    "min_score": 114,
+    "applicants": 0,
+    "enrolled": 25
+  },
+  {
+    "specialty_code": "6B04111",
+    "quota": "single_parent",
+    "min_score": 113,
+    "applicants": 0,
+    "enrolled": 13
+  },
+  {
+    "specialty_code": "6B04111",
+    "quota": "orphan",
+    "min_score": 64,
+    "applicants": 0,
+    "enrolled": 13
+  },
+  {
+    "specialty_code": "6B04111",
+    "quota": "disability_family",
+    "min_score": 102,
+    "applicants": 0,
+    "enrolled": 8
+  },
+  {
+    "specialty_code": "6B04111",
+    "quota": "disability_self",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 7
+  },
+  {
+    "specialty_code": "6B04201",
+    "quota": "общий",
+    "min_score": 119,
+    "applicants": 0,
+    "enrolled": 144
+  },
+  {
+    "specialty_code": "6B04201",
+    "quota": "large_family",
+    "min_score": 114,
+    "applicants": 0,
+    "enrolled": 21
+  },
+  {
+    "specialty_code": "6B04201",
+    "quota": "single_parent",
+    "min_score": 113,
+    "applicants": 0,
+    "enrolled": 17
+  },
+  {
+    "specialty_code": "6B04201",
+    "quota": "orphan",
+    "min_score": 76,
+    "applicants": 0,
+    "enrolled": 10
+  },
+  {
+    "specialty_code": "6B04201",
+    "quota": "disability_family",
+    "min_score": 102,
+    "applicants": 0,
+    "enrolled": 6
+  },
+  {
+    "specialty_code": "6B04201",
+    "quota": "disability_self",
+    "min_score": 79,
+    "applicants": 0,
+    "enrolled": 9
+  },
+  {
+    "specialty_code": "6B05103",
+    "quota": "общий",
+    "min_score": 81,
+    "applicants": 0,
+    "enrolled": 1406
+  },
+  {
+    "specialty_code": "6B05103",
+    "quota": "large_family",
+    "min_score": 71,
+    "applicants": 0,
+    "enrolled": 381
+  },
+  {
+    "specialty_code": "6B05103",
+    "quota": "single_parent",
+    "min_score": 68,
+    "applicants": 0,
+    "enrolled": 133
+  },
+  {
+    "specialty_code": "6B05103",
+    "quota": "orphan",
+    "min_score": 52,
+    "applicants": 0,
+    "enrolled": 17
+  },
+  {
+    "specialty_code": "6B05103",
+    "quota": "disability_family",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 68
+  },
+  {
+    "specialty_code": "6B05103",
+    "quota": "disability_self",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 26
+  },
+  {
+    "specialty_code": "6B05111",
+    "quota": "общий",
+    "min_score": 81,
+    "applicants": 0,
+    "enrolled": 1406
+  },
+  {
+    "specialty_code": "6B05111",
+    "quota": "large_family",
+    "min_score": 71,
+    "applicants": 0,
+    "enrolled": 381
+  },
+  {
+    "specialty_code": "6B05111",
+    "quota": "single_parent",
+    "min_score": 68,
+    "applicants": 0,
+    "enrolled": 133
+  },
+  {
+    "specialty_code": "6B05111",
+    "quota": "orphan",
+    "min_score": 52,
+    "applicants": 0,
+    "enrolled": 17
+  },
+  {
+    "specialty_code": "6B05111",
+    "quota": "disability_family",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 68
+  },
+  {
+    "specialty_code": "6B05111",
+    "quota": "disability_self",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 26
+  },
+  {
+    "specialty_code": "6B05202",
+    "quota": "общий",
+    "min_score": 73,
+    "applicants": 0,
+    "enrolled": 648
+  },
+  {
+    "specialty_code": "6B05202",
+    "quota": "сельская",
+    "min_score": 68,
+    "applicants": 0,
+    "enrolled": 346
+  },
+  {
+    "specialty_code": "6B05202",
+    "quota": "large_family",
+    "min_score": 71,
+    "applicants": 0,
+    "enrolled": 50
+  },
+  {
+    "specialty_code": "6B05202",
+    "quota": "single_parent",
+    "min_score": 68,
+    "applicants": 0,
+    "enrolled": 44
+  },
+  {
+    "specialty_code": "6B05202",
+    "quota": "orphan",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 11
+  },
+  {
+    "specialty_code": "6B05202",
+    "quota": "disability_family",
+    "min_score": 52,
+    "applicants": 0,
+    "enrolled": 59
+  },
+  {
+    "specialty_code": "6B05202",
+    "quota": "disability_self",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 14
+  },
+  {
+    "specialty_code": "6B05203",
+    "quota": "общий",
+    "min_score": 72,
+    "applicants": 0,
+    "enrolled": 1456
+  },
+  {
+    "specialty_code": "6B05203",
+    "quota": "large_family",
+    "min_score": 71,
+    "applicants": 0,
+    "enrolled": 9
+  },
+  {
+    "specialty_code": "6B05203",
+    "quota": "single_parent",
+    "min_score": 68,
+    "applicants": 0,
+    "enrolled": 12
+  },
+  {
+    "specialty_code": "6B05203",
+    "quota": "disability_family",
+    "min_score": 52,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B05203",
+    "quota": "disability_self",
+    "min_score": 55,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B05307",
+    "quota": "общий",
+    "min_score": 70,
+    "applicants": 0,
+    "enrolled": 1383
+  },
+  {
+    "specialty_code": "6B05307",
+    "quota": "single_parent",
+    "min_score": 68,
+    "applicants": 0,
+    "enrolled": 8
+  },
+  {
+    "specialty_code": "6B05307",
+    "quota": "orphan",
+    "min_score": 54,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B05307",
+    "quota": "disability_family",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 8
+  },
+  {
+    "specialty_code": "6B05307",
+    "quota": "disability_self",
+    "min_score": 59,
+    "applicants": 0,
+    "enrolled": 5
+  },
+  {
+    "specialty_code": "6B05308",
+    "quota": "общий",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 1204
+  },
+  {
+    "specialty_code": "6B06102",
+    "quota": "общий",
+    "min_score": 72,
+    "applicants": 0,
+    "enrolled": 3358
+  },
+  {
+    "specialty_code": "6B06102",
+    "quota": "сельская",
+    "min_score": 62,
+    "applicants": 0,
+    "enrolled": 1680
+  },
+  {
+    "specialty_code": "6B06102",
+    "quota": "large_family",
+    "min_score": 64,
+    "applicants": 0,
+    "enrolled": 727
+  },
+  {
+    "specialty_code": "6B06102",
+    "quota": "single_parent",
+    "min_score": 62,
+    "applicants": 0,
+    "enrolled": 423
+  },
+  {
+    "specialty_code": "6B06102",
+    "quota": "orphan",
+    "min_score": 26,
+    "applicants": 0,
+    "enrolled": 36
+  },
+  {
+    "specialty_code": "6B06102",
+    "quota": "disability_family",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 57
+  },
+  {
+    "specialty_code": "6B06102",
+    "quota": "disability_self",
+    "min_score": 26,
+    "applicants": 0,
+    "enrolled": 43
+  },
+  {
+    "specialty_code": "6B06106",
+    "quota": "общий",
+    "min_score": 72,
+    "applicants": 0,
+    "enrolled": 3358
+  },
+  {
+    "specialty_code": "6B06106",
+    "quota": "сельская",
+    "min_score": 62,
+    "applicants": 0,
+    "enrolled": 1680
+  },
+  {
+    "specialty_code": "6B06106",
+    "quota": "large_family",
+    "min_score": 64,
+    "applicants": 0,
+    "enrolled": 727
+  },
+  {
+    "specialty_code": "6B06106",
+    "quota": "single_parent",
+    "min_score": 62,
+    "applicants": 0,
+    "enrolled": 423
+  },
+  {
+    "specialty_code": "6B06106",
+    "quota": "orphan",
+    "min_score": 26,
+    "applicants": 0,
+    "enrolled": 36
+  },
+  {
+    "specialty_code": "6B06106",
+    "quota": "disability_family",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 57
+  },
+  {
+    "specialty_code": "6B06106",
+    "quota": "disability_self",
+    "min_score": 26,
+    "applicants": 0,
+    "enrolled": 43
+  },
+  {
+    "specialty_code": "6B06111",
+    "quota": "общий",
+    "min_score": 72,
+    "applicants": 0,
+    "enrolled": 3358
+  },
+  {
+    "specialty_code": "6B06111",
+    "quota": "сельская",
+    "min_score": 62,
+    "applicants": 0,
+    "enrolled": 1680
+  },
+  {
+    "specialty_code": "6B06111",
+    "quota": "large_family",
+    "min_score": 64,
+    "applicants": 0,
+    "enrolled": 727
+  },
+  {
+    "specialty_code": "6B06111",
+    "quota": "single_parent",
+    "min_score": 62,
+    "applicants": 0,
+    "enrolled": 423
+  },
+  {
+    "specialty_code": "6B06111",
+    "quota": "orphan",
+    "min_score": 26,
+    "applicants": 0,
+    "enrolled": 36
+  },
+  {
+    "specialty_code": "6B06111",
+    "quota": "disability_family",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 57
+  },
+  {
+    "specialty_code": "6B06111",
+    "quota": "disability_self",
+    "min_score": 26,
+    "applicants": 0,
+    "enrolled": 43
+  },
+  {
+    "specialty_code": "6B06201",
+    "quota": "общий",
+    "min_score": 69,
+    "applicants": 0,
+    "enrolled": 656
+  },
+  {
+    "specialty_code": "6B06201",
+    "quota": "сельская",
+    "min_score": 59,
+    "applicants": 0,
+    "enrolled": 354
+  },
+  {
+    "specialty_code": "6B06201",
+    "quota": "large_family",
+    "min_score": 64,
+    "applicants": 0,
+    "enrolled": 57
+  },
+  {
+    "specialty_code": "6B06201",
+    "quota": "single_parent",
+    "min_score": 62,
+    "applicants": 0,
+    "enrolled": 12
+  },
+  {
+    "specialty_code": "6B06201",
+    "quota": "orphan",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B06201",
+    "quota": "disability_family",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 14
+  },
+  {
+    "specialty_code": "6B06201",
+    "quota": "disability_self",
+    "min_score": 52,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B06203",
+    "quota": "общий",
+    "min_score": 69,
+    "applicants": 0,
+    "enrolled": 656
+  },
+  {
+    "specialty_code": "6B06203",
+    "quota": "сельская",
+    "min_score": 59,
+    "applicants": 0,
+    "enrolled": 354
+  },
+  {
+    "specialty_code": "6B06203",
+    "quota": "large_family",
+    "min_score": 64,
+    "applicants": 0,
+    "enrolled": 57
+  },
+  {
+    "specialty_code": "6B06203",
+    "quota": "single_parent",
+    "min_score": 62,
+    "applicants": 0,
+    "enrolled": 12
+  },
+  {
+    "specialty_code": "6B06203",
+    "quota": "orphan",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B06203",
+    "quota": "disability_family",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 14
+  },
+  {
+    "specialty_code": "6B06203",
+    "quota": "disability_self",
+    "min_score": 52,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B07103",
+    "quota": "общий",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 633
+  },
+  {
+    "specialty_code": "6B07103",
+    "quota": "сельская",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 338
+  },
+  {
+    "specialty_code": "6B07103",
+    "quota": "large_family",
+    "min_score": 66,
+    "applicants": 0,
+    "enrolled": 43
+  },
+  {
+    "specialty_code": "6B07103",
+    "quota": "single_parent",
+    "min_score": 62,
+    "applicants": 0,
+    "enrolled": 41
+  },
+  {
+    "specialty_code": "6B07103",
+    "quota": "rural_move",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 24
+  },
+  {
+    "specialty_code": "6B07103",
+    "quota": "orphan",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 5
+  },
+  {
+    "specialty_code": "6B07103",
+    "quota": "disability_family",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 19
+  },
+  {
+    "specialty_code": "6B07103",
+    "quota": "disability_self",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 3
+  },
+  {
+    "specialty_code": "6B07109",
+    "quota": "общий",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 1165
+  },
+  {
+    "specialty_code": "6B07109",
+    "quota": "large_family",
+    "min_score": 66,
+    "applicants": 0,
+    "enrolled": 135
+  },
+  {
+    "specialty_code": "6B07109",
+    "quota": "single_parent",
+    "min_score": 61,
+    "applicants": 0,
+    "enrolled": 68
+  },
+  {
+    "specialty_code": "6B07109",
+    "quota": "rural_move",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 13
+  },
+  {
+    "specialty_code": "6B07109",
+    "quota": "orphan",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B07109",
+    "quota": "disability_family",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 27
+  },
+  {
+    "specialty_code": "6B07109",
+    "quota": "disability_self",
+    "min_score": 54,
+    "applicants": 0,
+    "enrolled": 6
+  },
+  {
+    "specialty_code": "6B07106",
+    "quota": "общий",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 1729
+  },
+  {
+    "specialty_code": "6B07106",
+    "quota": "rural_move",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B07106",
+    "quota": "disability_family",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B07106",
+    "quota": "disability_self",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B07108",
+    "quota": "общий",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 1729
+  },
+  {
+    "specialty_code": "6B07108",
+    "quota": "rural_move",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B07108",
+    "quota": "disability_family",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B07108",
+    "quota": "disability_self",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B07105",
+    "quota": "общий",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 598
+  },
+  {
+    "specialty_code": "6B07105",
+    "quota": "сельская",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 280
+  },
+  {
+    "specialty_code": "6B07105",
+    "quota": "rural_move",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B07105",
+    "quota": "disability_family",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B07107",
+    "quota": "общий",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 598
+  },
+  {
+    "specialty_code": "6B07107",
+    "quota": "сельская",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 280
+  },
+  {
+    "specialty_code": "6B07107",
+    "quota": "rural_move",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B07107",
+    "quota": "disability_family",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B07201",
+    "quota": "общий",
+    "min_score": 62,
+    "applicants": 0,
+    "enrolled": 557
+  },
+  {
+    "specialty_code": "6B07201",
+    "quota": "сельская",
+    "min_score": 56,
+    "applicants": 0,
+    "enrolled": 324
+  },
+  {
+    "specialty_code": "6B07201",
+    "quota": "large_family",
+    "min_score": 66,
+    "applicants": 0,
+    "enrolled": 52
+  },
+  {
+    "specialty_code": "6B07201",
+    "quota": "single_parent",
+    "min_score": 61,
+    "applicants": 0,
+    "enrolled": 38
+  },
+  {
+    "specialty_code": "6B07201",
+    "quota": "rural_move",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 82
+  },
+  {
+    "specialty_code": "6B07201",
+    "quota": "orphan",
+    "min_score": 52,
+    "applicants": 0,
+    "enrolled": 9
+  },
+  {
+    "specialty_code": "6B07201",
+    "quota": "disability_family",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 19
+  },
+  {
+    "specialty_code": "6B07201",
+    "quota": "disability_self",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 11
+  },
+  {
+    "specialty_code": "6B07301",
+    "quota": "общий",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 1448
+  },
+  {
+    "specialty_code": "6B07301",
+    "quota": "large_family",
+    "min_score": 66,
+    "applicants": 0,
+    "enrolled": 102
+  },
+  {
+    "specialty_code": "6B07301",
+    "quota": "single_parent",
+    "min_score": 61,
+    "applicants": 0,
+    "enrolled": 69
+  },
+  {
+    "specialty_code": "6B07301",
+    "quota": "rural_move",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 45
+  },
+  {
+    "specialty_code": "6B07301",
+    "quota": "orphan",
+    "min_score": 55,
+    "applicants": 0,
+    "enrolled": 4
+  },
+  {
+    "specialty_code": "6B07301",
+    "quota": "disability_family",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 24
+  },
+  {
+    "specialty_code": "6B07301",
+    "quota": "disability_self",
+    "min_score": 54,
+    "applicants": 0,
+    "enrolled": 3
+  },
+  {
+    "specialty_code": "6B07302",
+    "quota": "общий",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 1448
+  },
+  {
+    "specialty_code": "6B07302",
+    "quota": "large_family",
+    "min_score": 66,
+    "applicants": 0,
+    "enrolled": 102
+  },
+  {
+    "specialty_code": "6B07302",
+    "quota": "single_parent",
+    "min_score": 61,
+    "applicants": 0,
+    "enrolled": 69
+  },
+  {
+    "specialty_code": "6B07302",
+    "quota": "rural_move",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 45
+  },
+  {
+    "specialty_code": "6B07302",
+    "quota": "orphan",
+    "min_score": 55,
+    "applicants": 0,
+    "enrolled": 4
+  },
+  {
+    "specialty_code": "6B07302",
+    "quota": "disability_family",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 24
+  },
+  {
+    "specialty_code": "6B07302",
+    "quota": "disability_self",
+    "min_score": 54,
+    "applicants": 0,
+    "enrolled": 3
+  },
+  {
+    "specialty_code": "6B07504",
+    "quota": "общий",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 300
+  },
+  {
+    "specialty_code": "6B07504",
+    "quota": "large_family",
+    "min_score": 66,
+    "applicants": 0,
+    "enrolled": 16
+  },
+  {
+    "specialty_code": "6B07504",
+    "quota": "single_parent",
+    "min_score": 62,
+    "applicants": 0,
+    "enrolled": 9
+  },
+  {
+    "specialty_code": "6B07504",
+    "quota": "rural_move",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 10
+  },
+  {
+    "specialty_code": "6B07504",
+    "quota": "disability_family",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 9
+  },
+  {
+    "specialty_code": "6B07504",
+    "quota": "disability_self",
+    "min_score": 54,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B08101",
+    "quota": "общий",
+    "min_score": 61,
+    "applicants": 0,
+    "enrolled": 237
+  },
+  {
+    "specialty_code": "6B08101",
+    "quota": "сельская",
+    "min_score": 54,
+    "applicants": 0,
+    "enrolled": 132
+  },
+  {
+    "specialty_code": "6B08101",
+    "quota": "large_family",
+    "min_score": 64,
+    "applicants": 0,
+    "enrolled": 6
+  },
+  {
+    "specialty_code": "6B08101",
+    "quota": "single_parent",
+    "min_score": 60,
+    "applicants": 0,
+    "enrolled": 7
+  },
+  {
+    "specialty_code": "6B08101",
+    "quota": "rural_move",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 16
+  },
+  {
+    "specialty_code": "6B08101",
+    "quota": "orphan",
+    "min_score": 57,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B08101",
+    "quota": "disability_family",
+    "min_score": 53,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B08101",
+    "quota": "disability_self",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B08104",
+    "quota": "общий",
+    "min_score": 61,
+    "applicants": 0,
+    "enrolled": 237
+  },
+  {
+    "specialty_code": "6B08104",
+    "quota": "сельская",
+    "min_score": 54,
+    "applicants": 0,
+    "enrolled": 132
+  },
+  {
+    "specialty_code": "6B08104",
+    "quota": "large_family",
+    "min_score": 64,
+    "applicants": 0,
+    "enrolled": 6
+  },
+  {
+    "specialty_code": "6B08104",
+    "quota": "single_parent",
+    "min_score": 60,
+    "applicants": 0,
+    "enrolled": 7
+  },
+  {
+    "specialty_code": "6B08104",
+    "quota": "rural_move",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 16
+  },
+  {
+    "specialty_code": "6B08104",
+    "quota": "orphan",
+    "min_score": 57,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B08104",
+    "quota": "disability_family",
+    "min_score": 53,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B08104",
+    "quota": "disability_self",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B08201",
+    "quota": "общий",
+    "min_score": 54,
+    "applicants": 0,
+    "enrolled": 250
+  },
+  {
+    "specialty_code": "6B08201",
+    "quota": "сельская",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 132
+  },
+  {
+    "specialty_code": "6B08201",
+    "quota": "orphan",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B08201",
+    "quota": "disability_self",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 1
+  },
+  {
+    "specialty_code": "6B08301",
+    "quota": "общий",
+    "min_score": 68,
+    "applicants": 0,
+    "enrolled": 212
+  },
+  {
+    "specialty_code": "6B08301",
+    "quota": "сельская",
+    "min_score": 66,
+    "applicants": 0,
+    "enrolled": 116
+  },
+  {
+    "specialty_code": "6B08301",
+    "quota": "large_family",
+    "min_score": 64,
+    "applicants": 0,
+    "enrolled": 167
+  },
+  {
+    "specialty_code": "6B08301",
+    "quota": "single_parent",
+    "min_score": 60,
+    "applicants": 0,
+    "enrolled": 112
+  },
+  {
+    "specialty_code": "6B08301",
+    "quota": "rural_move",
+    "min_score": 52,
+    "applicants": 0,
+    "enrolled": 217
+  },
+  {
+    "specialty_code": "6B08301",
+    "quota": "orphan",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 3
+  },
+  {
+    "specialty_code": "6B08301",
+    "quota": "disability_family",
+    "min_score": 51,
+    "applicants": 0,
+    "enrolled": 13
+  },
+  {
+    "specialty_code": "6B08301",
+    "quota": "disability_self",
+    "min_score": 50,
+    "applicants": 0,
+    "enrolled": 2
+  },
+  {
+    "specialty_code": "6B11102",
+    "quota": "общий",
+    "min_score": 115,
+    "applicants": 0,
+    "enrolled": 278
+  },
+  {
+    "specialty_code": "6B11102",
+    "quota": "сельская",
+    "min_score": 90,
+    "applicants": 0,
+    "enrolled": 151
+  },
+  {
+    "specialty_code": "6B11102",
+    "quota": "orphan",
+    "min_score": 52,
+    "applicants": 0,
+    "enrolled": 5
+  },
+  {
+    "specialty_code": "6B11102",
+    "quota": "disability_family",
+    "min_score": 85,
+    "applicants": 0,
+    "enrolled": 7
+  },
+  {
+    "specialty_code": "6B11102",
+    "quota": "disability_self",
+    "min_score": 61,
+    "applicants": 0,
+    "enrolled": 8
+  },
+  {
+    "specialty_code": "6B11101",
+    "quota": "общий",
+    "min_score": 121,
+    "applicants": 0,
+    "enrolled": 117
+  },
+  {
+    "specialty_code": "6B11101",
+    "quota": "сельская",
+    "min_score": 119,
+    "applicants": 0,
+    "enrolled": 63
+  },
+  {
+    "specialty_code": "6B11101",
+    "quota": "large_family",
+    "min_score": 112,
+    "applicants": 0,
+    "enrolled": 106
+  },
+  {
+    "specialty_code": "6B11101",
+    "quota": "single_parent",
+    "min_score": 111,
+    "applicants": 0,
+    "enrolled": 55
+  },
+  {
+    "specialty_code": "6B11101",
+    "quota": "orphan",
+    "min_score": 99,
+    "applicants": 0,
+    "enrolled": 9
+  },
+  {
+    "specialty_code": "6B11101",
+    "quota": "disability_family",
+    "min_score": 115,
+    "applicants": 0,
+    "enrolled": 4
+  },
+  {
+    "specialty_code": "6B11101",
+    "quota": "disability_self",
+    "min_score": 110,
+    "applicants": 0,
+    "enrolled": 2
+  }
 ]

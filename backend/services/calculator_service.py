@@ -67,6 +67,31 @@ def _load_scores(db: Session, specialty_ids: list[int], quota: str) -> dict[int,
     return {r.specialty_id: r for r in rows}
 
 
+def _load_estimates(db: Session, specialty_ids: list[int]) -> dict[int, int]:
+    """Оценка проходного балла для программ без данных по нужной квоте и без общего.
+
+    У части ОП (особенно педагогических 6B01xxx) гранты в 2025 распределялись
+    только по льготным квотам, поэтому строки общего конкурса в данных нет.
+    Чтобы такие программы не пропадали из выдачи, оцениваем порог по максимуму
+    из всех доступных квот: общий конкурс по нашим данным в среднем на ~6 баллов
+    выше льготных, так что max — разумная (слегка консервативная) оценка.
+    Возвращаем {specialty_id: estimated_min_score}.
+    """
+    rows = (
+        db.query(PassingScore)
+        .filter(PassingScore.specialty_id.in_(specialty_ids))
+        .all()
+    )
+    estimates: dict[int, int] = {}
+    for r in rows:
+        if r.min_score is None:
+            continue
+        cur = estimates.get(r.specialty_id)
+        if cur is None or r.min_score > cur:
+            estimates[r.specialty_id] = r.min_score
+    return estimates
+
+
 def assessment_chances_list(
     db: Session,
     ent_score: int,
@@ -89,11 +114,17 @@ def assessment_chances_list(
 
     scores_map = _load_scores(db, specialty_ids, effective_quota)
 
-    # Fallback: программа без данных по выбранной квоте → общий конкурс.
+    # Tier-1 fallback: программа без данных по выбранной квоте → общий конкурс.
     fallback_map: dict[int, PassingScore] = {}
     missing_ids = [sid for sid in specialty_ids if sid not in scores_map]
     if missing_ids and effective_quota != "общий":
         fallback_map = _load_scores(db, missing_ids, "общий")
+
+    # Tier-2 fallback: нет ни выбранной квоты, ни общего конкурса (типично для
+    # педагогических ОП) → оцениваем порог по максимуму из доступных квот, чтобы
+    # программа всё-таки попала в выдачу (помечаем как fallback ⇒ ∗ на фронте).
+    still_missing = [sid for sid in missing_ids if sid not in fallback_map]
+    estimate_map: dict[int, int] = _load_estimates(db, still_missing) if still_missing else {}
 
     results = []
     used_fallback_for_some = False
@@ -107,14 +138,17 @@ def assessment_chances_list(
             continue
 
         score_row = scores_map.get(spec.id) or fallback_map.get(spec.id)
-        if score_row is None or score_row.min_score is None:
-            continue
+        if score_row is not None and score_row.min_score is not None:
+            min_score = score_row.min_score
+        else:
+            # последний резерв — оценка по доступным квотам
+            min_score = estimate_map.get(spec.id)
+            if min_score is None:
+                continue
 
         is_fallback = quota_was_substituted or (spec.id not in scores_map)
         if is_fallback:
             used_fallback_for_some = True
-
-        min_score = score_row.min_score
 
         chance = 1 / (1 + math.exp(-SIGMOID_K * (ent_score - min_score)))
 
