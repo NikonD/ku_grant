@@ -34,6 +34,6 @@ def assessment_chance(
         db=db,
         ent_score=request.ent_score,
         item_comb=request.item_comb,
-        quota=request.quota,
+        quotas=request.quota_list(),
         lang=effective_lang,
     )

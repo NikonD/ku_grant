@@ -13,13 +13,13 @@ export default function App() {
   const { t, i18n } = useTranslation();
   const [result, setResult]         = useState(null);
   const [entScore, setEntScore]     = useState(null);
-  const [quotaCode, setQuotaCode]   = useState('общий');
+  const [quotaCodes, setQuotaCodes] = useState(['общий']);
   const [excluded, setExcluded]     = useState(0);
 
-  function handleResult(data, score, qCode, excludedByThreshold = 0) {
+  function handleResult(data, score, qCodes, excludedByThreshold = 0) {
     setResult(data);
     setEntScore(score);
-    setQuotaCode(qCode);
+    setQuotaCodes(Array.isArray(qCodes) ? qCodes : [qCodes]);
     setExcluded(excludedByThreshold);
   }
 
@@ -35,7 +35,7 @@ export default function App() {
     setResult(null);
   }, [i18n.language]);
 
-  const quotaLabel = t(`quotas.${quotaCode}.label`);
+  const quotaLabel = quotaCodes.map(c => t(`quotas.${c}.label`)).join(', ');
 
   return (
     <div className="app">
@@ -61,7 +61,7 @@ export default function App() {
 
         <div className="layout__right">
           {result
-            ? <ResultPanel result={result} entScore={entScore} quotaLabel={quotaLabel} excludedByThreshold={excluded} />
+            ? <ResultPanel result={result} entScore={entScore} quotaLabel={quotaLabel} excludedByThreshold={excluded} multiQuota={quotaCodes.length > 1} />
             : <InfoPanel />
           }
         </div>

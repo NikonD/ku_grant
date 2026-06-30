@@ -32,7 +32,8 @@
       "sub2": "Pick the second profile subject",
       "pair": "The chosen subject combination is not allowed",
       "server": "Server error: {{message}}. Make sure the backend is running."
-    }
+    },
+    "quotaHint": "You can select several quotas — for each program we use the one giving the best chance"
   },
   "subjects": {
     "Биология": "Biology",
@@ -107,7 +108,8 @@
       "good": "Good",
       "average": "Average",
       "low": "Low"
-    }
+    },
+    "bestQuota": "Best quota"
   },
   "info": {
     "title": "How to use the calculator",

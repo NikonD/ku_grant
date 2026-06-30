@@ -9,7 +9,7 @@ function getBadge(prob, t) {
   return                 { color: 'red',    label: t('result.badges.low')       };
 }
 
-export default function ResultPanel({ result, entScore, quotaLabel, excludedByThreshold = 0 }) {
+export default function ResultPanel({ result, entScore, quotaLabel, excludedByThreshold = 0, multiQuota = false }) {
   const { t } = useTranslation();
 
   const total          = result.length;
@@ -73,6 +73,11 @@ export default function ResultPanel({ result, entScore, quotaLabel, excludedByTh
                   {spec.name}
                   {spec.isFallback && (
                     <span className="rp-fallback-mark" title={t('result.fallbackNotice')}>∗</span>
+                  )}
+                  {multiQuota && spec.bestQuota && (
+                    <span className="rp-bestquota" title={t('result.bestQuota')}>
+                      {t(`quotas.${spec.bestQuota}.label`)}
+                    </span>
                   )}
                 </span>
                 <div className="rp-row__bar-wrap">

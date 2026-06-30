@@ -61,9 +61,21 @@ export default function CalculatorForm({ onResult }) {
   const [entScore, setEntScore] = useState('');
   const [sub1,     setSub1]     = useState('');
   const [sub2,     setSub2]     = useState('');
-  const [quota,    setQuota]    = useState('общий');
+  const [quotas,   setQuotas]   = useState(['общий']);
   const [error,    setError]    = useState('');
   const [loading,  setLoading]  = useState(false);
+
+  // Мультивыбор льгот: тогл одной квоты. "общий" взаимоисключается с льготами —
+  // выбрал общий → льготы снимаются, и наоборот (общий = без льгот).
+  function toggleQuota(value) {
+    setQuotas(prev => {
+      if (value === 'общий') return ['общий'];
+      const next = prev.includes(value)
+        ? prev.filter(v => v !== value)
+        : [...prev.filter(v => v !== 'общий'), value];
+      return next.length ? next : ['общий'];
+    });
+  }
 
   const availableSub2 = useMemo(() => {
     if (!sub1) return [];
@@ -86,7 +98,6 @@ export default function CalculatorForm({ onResult }) {
   }
 
   const pairComb = sub1 && sub2 ? getPairComb(sub1, sub2) : null;
-  const selectedQuota = QUOTAS.find(q => q.value === quota);
 
   // отображаемая связка — берём перевод комбинации из i18n.subjects
   function displayPair(comb) {
@@ -116,7 +127,8 @@ export default function CalculatorForm({ onResult }) {
 
     setLoading(true);
     try {
-      const data = await calculateProbability(score, pairComb, quota);
+      const effectiveQuotas = quotas.length ? quotas : ['общий'];
+      const data = await calculateProbability(score, pairComb, effectiveQuotas);
 
       const adapted = data.assessments
         .map(item => ({
@@ -124,10 +136,11 @@ export default function CalculatorForm({ onResult }) {
           probability: Math.round(item.chance),
           baseScore:   item.min_score,
           isFallback:  item.is_fallback === true,
+          bestQuota:   item.best_quota || null,
         }))
         .sort((a, b) => b.probability - a.probability);
 
-      onResult(adapted, score, quota, data.excluded_by_threshold || 0);
+      onResult(adapted, score, effectiveQuotas, data.excluded_by_threshold || 0);
     } catch (err) {
       setError(t('calculator.errors.server', { message: err.message }));
     } finally {
@@ -199,19 +212,31 @@ export default function CalculatorForm({ onResult }) {
 
         <div className="field">
           <label className="label">{t('calculator.quota')}</label>
-          <select value={quota} onChange={e => setQuota(e.target.value)}>
-            {QUOTAS.map(q => (
-              <option key={q.value} value={q.value}>{t(`quotas.${q.value}.label`)}</option>
-            ))}
-          </select>
+          <div className="quota-grid">
+            {QUOTAS.map(q => {
+              const on = quotas.includes(q.value);
+              return (
+                <label key={q.value} className={`quota-chip ${on ? 'quota-chip--on' : ''}`}>
+                  <input
+                    type="checkbox"
+                    className="quota-chip__input"
+                    checked={on}
+                    onChange={() => toggleQuota(q.value)}
+                  />
+                  <span className="quota-chip__box" aria-hidden="true" />
+                  <span className="quota-chip__text">
+                    <span className="quota-chip__label">{t(`quotas.${q.value}.label`)}</span>
+                    {q.percent != null && (
+                      <span className="quota-chip__pct">{q.percent}%</span>
+                    )}
+                  </span>
+                </label>
+              );
+            })}
+          </div>
           <span className="field__note field__note--blue">
-            ℹ️ {t(`quotas.${quota}.note`)}
+            ℹ️ {t('calculator.quotaHint')}
           </span>
-          {selectedQuota?.percent != null && (
-            <span className="field__percent">
-              {t('calculator.quotaPercent', { percent: selectedQuota.percent })}
-            </span>
-          )}
         </div>
 
         {error && (

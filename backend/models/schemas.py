@@ -72,8 +72,19 @@ class SpecialtyShortSchema(BaseModel):
 class AssessmentChanceRequest(BaseModel):
     ent_score: int = Field(..., ge=0, le=140, description="Балл ЕНТ")
     item_comb: str = Field(..., description="Каноническая (RU) комбинация предметов")
-    quota:     str = Field(description="Квота")
-    lang:      Optional[Lang] = Field(default=None, description="Язык ответа")
+    # quota — одиночная (старый клиент); quotas — список выбранных льгот (новый).
+    quota:     Optional[str]       = Field(default=None, description="Квота (одна, для совместимости)")
+    quotas:    Optional[List[str]] = Field(default=None, description="Список выбранных квот")
+    lang:      Optional[Lang]      = Field(default=None, description="Язык ответа")
+
+    def quota_list(self) -> List[str]:
+        """Нормализуем вход: всегда возвращаем непустой список квот без дублей."""
+        raw = self.quotas if self.quotas else ([self.quota] if self.quota else ["общий"])
+        seen: list[str] = []
+        for q in raw:
+            if q and q not in seen:
+                seen.append(q)
+        return seen or ["общий"]
 
 
 class AssessmentItem(BaseModel):
@@ -83,6 +94,7 @@ class AssessmentItem(BaseModel):
     min_score:   int
     chance:      float
     is_fallback: bool = False
+    best_quota:  Optional[str] = None   # квота, давшая лучший шанс (при выборе нескольких)
 
 
 class AssessmentChanceResponse(BaseModel):

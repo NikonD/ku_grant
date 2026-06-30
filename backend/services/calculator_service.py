@@ -92,39 +92,72 @@ def _load_estimates(db: Session, specialty_ids: list[int]) -> dict[int, int]:
     return estimates
 
 
-def assessment_chances_list(
+def _resolve_quota_scores(
     db: Session,
-    ent_score: int,
-    item_comb: str,
+    specialty_ids: list[int],
     quota: str,
-    lang: Optional[str] = None,
-) -> dict:
-    lang = _resolve_lang(lang)
-    logger.info("assessment_chances_list lang=%s quota=%s item=%r", lang, quota, item_comb)
+) -> dict[int, tuple[int, bool]]:
+    """Для ОДНОЙ квоты возвращает {specialty_id: (min_score, is_fallback)}.
 
-    specialties = db.query(Specialty).filter(Specialty.item_comb == item_comb).all()
-    specialty_ids = [s.id for s in specialties]
-
-    if not specialty_ids:
-        return {"assessments": []}
-
-    # Квоты без данных по KU → сразу работаем с общим конкурсом.
+    Та же 3-уровневая логика: точные данные квоты → общий конкурс →
+    оценка по максимуму доступных квот.
+    """
+    # Квоты без данных по KU → сразу общий конкурс.
     effective_quota = "общий" if quota in QUOTAS_WITHOUT_DATA else quota
     quota_was_substituted = effective_quota != quota
 
     scores_map = _load_scores(db, specialty_ids, effective_quota)
 
-    # Tier-1 fallback: программа без данных по выбранной квоте → общий конкурс.
+    # Tier-1: нет данных по квоте → общий конкурс.
     fallback_map: dict[int, PassingScore] = {}
     missing_ids = [sid for sid in specialty_ids if sid not in scores_map]
     if missing_ids and effective_quota != "общий":
         fallback_map = _load_scores(db, missing_ids, "общий")
 
-    # Tier-2 fallback: нет ни выбранной квоты, ни общего конкурса (типично для
-    # педагогических ОП) → оцениваем порог по максимуму из доступных квот, чтобы
-    # программа всё-таки попала в выдачу (помечаем как fallback ⇒ ∗ на фронте).
+    # Tier-2: нет ни квоты, ни общего → оценка по максимуму доступных квот.
     still_missing = [sid for sid in missing_ids if sid not in fallback_map]
-    estimate_map: dict[int, int] = _load_estimates(db, still_missing) if still_missing else {}
+    estimate_map = _load_estimates(db, still_missing) if still_missing else {}
+
+    out: dict[int, tuple[int, bool]] = {}
+    for sid in specialty_ids:
+        row = scores_map.get(sid) or fallback_map.get(sid)
+        if row is not None and row.min_score is not None:
+            min_score = row.min_score
+        else:
+            min_score = estimate_map.get(sid)
+            if min_score is None:
+                continue
+        is_fallback = quota_was_substituted or (sid not in scores_map)
+        out[sid] = (min_score, is_fallback)
+    return out
+
+
+def assessment_chances_list(
+    db: Session,
+    ent_score: int,
+    item_comb: str,
+    quotas: list[str],
+    lang: Optional[str] = None,
+) -> dict:
+    lang = _resolve_lang(lang)
+    # дедуп с сохранением порядка; пустой список → общий конкурс.
+    quota_list: list[str] = []
+    for q in (quotas or []):
+        if q and q not in quota_list:
+            quota_list.append(q)
+    if not quota_list:
+        quota_list = ["общий"]
+
+    logger.info("assessment_chances_list lang=%s quotas=%s item=%r", lang, quota_list, item_comb)
+
+    specialties = db.query(Specialty).filter(Specialty.item_comb == item_comb).all()
+    specialty_ids = [s.id for s in specialties]
+
+    if not specialty_ids:
+        return {"assessments": [], "excluded_by_threshold": 0}
+
+    # Карта баллов по каждой выбранной квоте.
+    per_quota = {q: _resolve_quota_scores(db, specialty_ids, q) for q in quota_list}
 
     results = []
     used_fallback_for_some = False
@@ -137,16 +170,19 @@ def assessment_chances_list(
             excluded_by_threshold += 1
             continue
 
-        score_row = scores_map.get(spec.id) or fallback_map.get(spec.id)
-        if score_row is not None and score_row.min_score is not None:
-            min_score = score_row.min_score
-        else:
-            # последний резерв — оценка по доступным квотам
-            min_score = estimate_map.get(spec.id)
-            if min_score is None:
+        # Берём квоту с минимальным проходным баллом — это лучший шанс.
+        best: Optional[tuple[int, bool, str]] = None  # (min_score, is_fallback, quota)
+        for q in quota_list:
+            entry = per_quota[q].get(spec.id)
+            if entry is None:
                 continue
+            ms, fb = entry
+            if best is None or ms < best[0]:
+                best = (ms, fb, q)
+        if best is None:
+            continue
 
-        is_fallback = quota_was_substituted or (spec.id not in scores_map)
+        min_score, is_fallback, best_quota = best
         if is_fallback:
             used_fallback_for_some = True
 
@@ -159,12 +195,11 @@ def assessment_chances_list(
             "min_score":   min_score,
             "chance":      round(chance * 100, 2),
             "is_fallback": is_fallback,
+            "best_quota":  best_quota,
         })
 
-    if quota_was_substituted:
-        logger.info("Квота %r без данных для KU — расчёт по общему конкурсу", quota)
     if used_fallback_for_some:
-        logger.info("Часть программ квоты %r без данных за 2025 — fallback на общий", effective_quota)
+        logger.info("Часть программ без точных данных по выбранным квотам — fallback/оценка")
     if excluded_by_threshold:
         logger.info("Отфильтровано %d программ — балл ниже порога допуска", excluded_by_threshold)
 

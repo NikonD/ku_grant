@@ -18,15 +18,17 @@ export async function getSpecialties() {
 
 // Рассчитать вероятность поступления
 // item_comb — каноническая (RU) строка вида "Математика + Физика"
-// quota     — строка вида "общий", "сельская" и т.д.
-export async function calculateProbability(entScore, item_comb, quota) {
+// quotas    — массив кодов квот ["общий", "сельская", ...]; берётся лучший шанс
+export async function calculateProbability(entScore, item_comb, quotas) {
+  const list = Array.isArray(quotas) ? quotas : [quotas].filter(Boolean);
   const res = await fetch(`${API_URL}/calculator/assessment?lang=${lang()}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       ent_score: entScore,
       item_comb,
-      quota,
+      quotas: list,
+      quota: list[0],   // для обратной совместимости со старым бэкендом
       lang: lang(),
     }),
   });
